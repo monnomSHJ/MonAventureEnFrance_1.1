@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mon Aventure en France</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+
+            <header class="header">
+                <div class="header-logo">
+                    <div class="logo-icon">✈️</div>
+                    <div class="logo-text">Mon Aventure en France</div>
+                </div>
+
+                <section class="status-bar">
+                    <div class="status-item">
+                        <div class="name">👤 이름</div>
+                        <div class="value">Guest</div>
+                    </div>
+                    <div class="status-item">
+                        <div class="name">💸 지갑</div>
+                        <div class="value">- 유로</div>
+                    </div>
+                    <div class="status-item">
+                        <div class="name">🌟 점수</div>
+                        <div class="value">0</div>
+                    </div>
+                </section>
+            </header>
+
+            <main class="contents">
+                <div id="transition-overlay" class="transition-overlay"></div>
+                <div id="content-main" class="content-main">
+                    <div id="bg-container" class="bg-container hidden"></div>
+                    <div id="narration-box" class="text-box narration hidden">example text</div>
+                    <div id="dialogue-box" class="text-box dialogue hidden">
+                        <div class="dialogue-container">
+                            <div id="dialogue-text"></div>
+                            <div id="next-btn" class="next-btn"></div>
+                        </div>
+                    </div>
+
+                    <div id="overlay-image" class="overlay-image hidden"></div>
+                    <div id="person-image" class="person-image hidden"></div>
+                </div>
+            </main>
+
+            <footer class="quest">
+                <div class="quest-title"></div>
+                <div class="quest-list"></div>
+            </footer>
+        </div>
+
+        <div id="popup" class="popup hidden">
+            <div id="popup-header" class="popup-header">
+                <div class="popup-header-title">exemple text</div>
+                <div class="popup-header-close-btn"></div>
+            </div>
+            <div id="popup-content" class="popup-content">
+                <div class="popup-content-text">example text<br>exemple text<br>exemple text</div>
+                <div class="popup-content-btn-group">
+                    <div id="popup-content-btn1" class="popup-content-btn">exemple</div>
+                    <div id="popup-content-btn2" class="popup-content-btn">exemple</div>
+                    <div id="popup-content-btn3" class="popup-content-btn">exemple</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dictionary-panel">
+            <div id="dictionary-panel-header" class="dictionary-panel-header">
+                <div class="dictionary-panel-header-text">📚 단어장</div>
+                <div class="dictionary-panel-header-arrow">▲</div>
+            </div>
+            <div id="dictionary-panel-content" class="dictionary-panel-content">
+                <div id="dictionary-panel-content-upside" class="dictionary-panel-content-upside">
+                    <input type="text" id="dictionary-search" placeholder="단어 검색 (fr)" />
+                    <div id="toggle-saved-words" class="toggle-saved-words"></div>
+                </div>
+                <div id="dictionary-list" class="dictionary-list"></div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+        <div class="dictionary-overlay"></div>
+
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
