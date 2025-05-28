@@ -1,7 +1,8 @@
 import { state } from "../../script.js";
 import { loadScene, overlay } from "../../sceneManager.js";
 import { renderStatusBar } from "../../statusBar.js";
-import { getIntro2Scene } from "./intro2.js";
+import { loadGameState, saveGameState } from "../../saveLoad.js";
+import { getCharacterSelectScene } from "./characterSelect.js";
 
 export function getIntro1Scene() {
     return {
@@ -18,126 +19,134 @@ export function getIntro1Scene() {
             2025-1 언어교육캡스톤디자인<br />
             기획 및 개발 : 불어교육과 지현선, 불어교육과 신홍준
           </div>
-          <div class="name-input-box">
-            <label for="userName">예약자 성함을 입력해주세요.</label><br />
-              <div class="name-input-box-group">
-                <input type="text" id="userName" placeholder="ex. Hongjun" />
-                <button id="start-btn">입력 완료!</button>
-              </div>
+          <div class="start-options">
+            <button id="new-game-btn" class="button">새로 시작</button>
+            <button id="load-game-btn" class="button" ${state.hasSaveData ? '' : 'disabled'}>불러오기</button>
           </div>
         </div>
       `,
-
       onMount: setupIntroEvents
     }
 };
 
 export function setupIntroEvents() {
-  let isKeyHandlerActive = false;
-
+  const newGameBtn = document.getElementById("new-game-btn");
+  const loadGameBtn = document.getElementById("load-game-btn");
   const popup = document.getElementById("popup");
   const popupHeaderTitle = document.querySelector(".popup-header-title");
   const popupContentText = document.querySelector(".popup-content-text");
   const btn1 = document.getElementById("popup-content-btn1");
   const btn2 = document.getElementById("popup-content-btn2");
   const btn3 = document.getElementById("popup-content-btn3");
-  const startBtn = document.getElementById("start-btn");
-  const nameInput = document.getElementById("userName");
 
-  const keyHandler = function (e) {
-    if (popup.classList.contains("hidden")) return;
+  // '불러오기' 버튼의 활성화 상태 업데이트
+  if (loadGameBtn) {
+    loadGameBtn.disabled = !localStorage.getItem('gameState');
+  }
 
-    const currentInput = nameInput.value.trim();
+  // 새로 시작 버튼 클릭
+  if (newGameBtn) {
+    newGameBtn.addEventListener("click", () => {
+      const confirmNewGame = () => {
+        state.userName = "-";
+        state.balance = 500;
+        state.score = 0;
+        state.savedVocabList = [];
+        state.currentQuest = '';
+        state.selectedHotelId = '';
+        state.selectedHotelName = '';
+        state.selectedDish = 'null';
+        state.selectedCafe = 'null';
+        state.selectedCity = null;
+        state.selectedTransport = null;
+        state.viewedArtworks = new Set();
+        state.nextScene = 'null';
+        state.visitedLyonSpots = new Set();
+        state.viewedLyonArtworks = new Set();
+        state.viewedMarseilleArtworks = new Set();
+        state.viewedStrasbourgArtworks = new Set();
+        state.viewedBordeauxArtworks = new Set();
+        state.sceneSummaries = [];
+        state.hasSaveData = false;
+        state.playerCharacter = null;
+        state.currentModule = null;
+        state.completedModules = new Set();
 
-    if (!currentInput && (e.key === "Escape" || e.key === "Enter")) {
-      closePopup();
-    } else if (currentInput) {
-      if (e.key === "Escape") {
-        btn1.click();
-      } else if (e.key === "Enter") {
-        btn2.click();
+        localStorage.removeItem('gameState');
+        renderStatusBar();
+        loadScene(getCharacterSelectScene());
+      };
+
+      // 기존 저장 데이터가 있으면 확인 팝업 띄우기
+      if (localStorage.getItem('gameState')) {
+        popupHeaderTitle.textContent = "알림";
+        popupContentText.innerHTML = "<p>새로 시작하면 기존 저장 데이터가 사라집니다.<br />계속하시겠습니까?</p>"
+
+        btn1.textContent = "취소";
+        btn1.classList.remove('hidden');
+        btn2.textContent = "확인";
+        btn2.classList.remove('hidden');
+        btn3.classList.add('hidden');
+
+        popup.classList.remove('hidden');
+        overlay.classList.add('show');
+
+        btn1.onclick = () => {
+          popup.classList.add('hidden');
+          overlay.classList.remove('show');
+        };
+
+        btn2.onClick = () => {
+          closePopup();
+          confirmNewGame();
+        };
+      } else {
+        confirmNewGame();
       }
-    }
-  };
+    });
+  }
+
+  // 불러오기 버튼 클릭
+  if (loadGameBtn) {
+    loadGameBtn.addEventListener("click", () => {
+      const loadedState = loadGameState();
+
+      if (loadedState) {
+        popupHeaderTitle.textContent = "게임 불러오기 성공";
+        popupContentText.innerHTML = `<p>${loadedState.userName}님의 저장된 게임을 불러왔습니다!</p>`;
+
+        btn1.textContent = "계속하기";
+        btn1.classList.remove('hidden');
+        btn2.classList.add('hidden');
+        btn3.classList.add('hidden');
+
+        popup.classList.remove('hidden');
+        overlay.classList.add('show');
+
+        btn1.onclick = () => {
+          closePopup();
+          loadScene(getModuleSelecteScene());
+        };
+      } else {
+        // 불러오기 실패 메시지
+        popupHeaderTitle.textContent = "오류 발생!";
+        popupContentText.innerHTML = "<p>저장된 게임이 없습니다.</p>";
+        btn1.textContent = "확인";
+        btn1.classList.remove('hidden');
+        btn2.classList.add('hidden');
+        btn3.classList.add('hidden');
+
+        popup.classList.remove('hidden');
+        overlay.classList.add('show');
+
+        btn1.onclick = closePopup;
+      }
+    });
+  }
+
 
   function closePopup() {
     popup.classList.add("hidden");
     overlay.classList.remove("show");
-    
-    if (isKeyHandlerActive) {
-      window.removeEventListener("keydown", keyHandler);
-      isKeyHandlerActive = false;
-    }
-  }
-
-  function handleStart() {
-    if (!popup.classList.contains("hidden")) return;
-
-    const input = nameInput.value.trim();
-
-    if (!input) {
-      popupHeaderTitle.textContent = "오류 발생!";
-      popupContentText.innerHTML = "이름을 입력해주세요.";
-
-      btn1.textContent = "확인";
-      btn2.classList.add('hidden');
-      btn3.classList.add('hidden');
-
-      popup.classList.remove('hidden');
-      overlay.classList.add('show');
-
-      btn1.onclick = closePopup;
-
-      if (!isKeyHandlerActive) {
-        setTimeout(() => {
-          window.addEventListener("keydown", keyHandler);
-          isKeyHandlerActive = true;
-        }, 0);
-      }
-
-      return;
-    }
-
-    state.userName = input;
-
-    popupHeaderTitle.textContent = "정보 확인";
-    popupContentText.innerHTML = `
-    <p>아래 이름이 맞습니까?</p>
-    <h3>>  ${state.userName}  <</h3>
-    `
-
-    btn1.textContent = "아니요";
-    btn1.classList.remove('hidden');
-    btn2.textContent = "예";
-    btn2.classList.remove('hidden');
-    btn3.classList.add('hidden');
-
-    popup.classList.remove('hidden');
-    overlay.classList.add('show');
-
-    btn1.onclick = closePopup;
-
-    btn2.onclick = () => {
-      closePopup();
-      renderStatusBar();
-      loadScene(getIntro2Scene());
-      console.log("loadScene 호출");
-    };
-
-    if (!isKeyHandlerActive) {
-      setTimeout(() => {
-        window.addEventListener("keydown", keyHandler);
-        isKeyHandlerActive = true;
-      }, 0);
-    }
-  }
-
-  if (startBtn && nameInput) {
-    startBtn.addEventListener("click", handleStart);
-    nameInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" && popup.classList.contains("hidden")) {
-        handleStart();
-      }
-    });
   }
 }

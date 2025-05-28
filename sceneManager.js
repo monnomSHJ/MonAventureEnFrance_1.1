@@ -3,6 +3,8 @@ import { renderStatusBar, renderQuest } from "./statusBar.js";
 import { showProductionPopup } from "./productionPopup.js";
 import { showMiniMapGame } from "./miniMapGamePopup.js";
 import { maybeShowChoiceAgain, showChoicePopup } from "./chociePopup.js";
+import { allModules } from "./data/modules.js";
+import { saveGameState } from "./saveLoad.js";
 
 // Scenes
 import { getIntro1Scene } from "./data/scenes/intro1.js";
@@ -58,6 +60,8 @@ import { getStrasbourg2Scene } from "./data/scenes/strasbourg2.js";
 import { getBordeaux2Scene } from "./data/scenes/bordeaux2.js";
 import { getEnd1Scene } from "./data/scenes/end1.js";
 import { getEnd2Scene } from "./data/scenes/end2.js";
+import { getCharacterSelectScene } from "./data/scenes/characterSelect.js";
+import { getModuleSelecteScene } from "./data/scenes/moduleSelect.js";
 
 // State
 export let currentScene = null;
@@ -65,6 +69,7 @@ export let currentLineIndex = 0;
 let isTyping = false;
 let skipTyping = false;
 let lastProductionData = null;
+let currentAudio = null;
 
 export const overlay = document.querySelector('.overlay');
 const contentMain = document.getElementById("content-main");
@@ -126,6 +131,11 @@ export function loadScene(scene) {
         }
   
         if (typeof scene.onMount === "function") scene.onMount();
+
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
         
   
         setTimeout(() => {
@@ -177,28 +187,63 @@ export async function updateDialogue() {
         lastProductionData = line.production;
         showProductionPopup(line.production);
         overlay.classList.add("show");
+
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
         return;
     }
     
     if (line.miniGame) {
         showMiniMapGame(currentScene);
         overlay.classList.add("show");
+
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
         return;
     }
 
     if (maybeShowChoiceAgain(line)) {
         overlay.classList.add("show");
+
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
         return;
     } 
 
     if (line.choices) {
         showChoicePopup(line.choices);
         overlay.classList.add("show");
+
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
         return;
     }
 
     if (typeof line.customAction === "function") {
         line.customAction();
+    }
+
+    if (line.sound) {
+            if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+        currentAudio = new Audio(line.sound);
+        currentAudio.play().catch(e => console.error("오디오 재생 실패:", e));
+    } else {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+        }
     }
 
 
@@ -266,6 +311,28 @@ async function handleNextLine() {
     if (currentScene && currentLineIndex < currentScene.lines.length) {
         await updateDialogue();
     } else {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+        }
+
+        const completedModule = allModules.find(module => module.endScene().id === currentScene.id);
+
+        if (completedModule && state.currentModule === completedModule.id) {
+            state.completedModules.add(completedModule.id);
+            state.currentModule = null;
+            saveGameState();
+
+            if (state.completedModules.size === allModules.length) {
+                loadScene(getEnd2Scene());
+            } else {
+                loadScene(getModuleSelecteScene());
+            }
+            renderQuest(state.currentQuest);
+            return;
+        }
+
         if (typeof currentScene.nextScene === "function") {
             const next = currentScene.nextScene();
             loadScene(next);
@@ -332,7 +399,9 @@ export function setupDebugMenu() {
         strasbourg2: () => loadScene(getStrasbourg2Scene()),
         bordeaux2: () => loadScene(getBordeaux2Scene()),
         end1: () => loadScene(getEnd1Scene()),
-        end2: () => loadScene(getEnd2Scene())
+        end2: () => loadScene(getEnd2Scene()),
+        characterSelect: () => loadScene(getModuleSelectScene()),
+        moduleSelect: () => loadScene(getModuleSelectScene())
         };
 
         if (sceneMap[sceneId]) {
