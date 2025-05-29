@@ -1,0 +1,200 @@
+.popup.mini-map-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 400px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 9999;
+}
+
+.popup.mini-map-popup .popup-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0 24px;
+}
+
+.popup.mini-map-popup .popup-content-text {
+    margin-bottom: 16px;
+    text-align: left;
+    width: 100%;
+    max-width: 256px;
+    text-indent: -24px;
+    margin-left: 24px;
+}
+
+.mini-map-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.direction-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.direction-buttons .left-right {
+    display: flex;
+    gap: 40px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 8px solid transparent;
+}
+
+.arrow.up {
+    border-image: url('../images/arrowUp.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+}
+
+.arrow.left {
+    border-image: url('../images/arrowLeft.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+}
+
+.arrow.right {
+    border-image: url('../images/arrowRight.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+}
+
+.arrow.down {
+    border-image: url('../images/arrowDown.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+}
+
+.arrow:hover {
+    filter: brightness(90%);
+    transform: scale(1.05);
+}
+
+.arrow:active {
+    transform: scale(0.95);
+}
+
+.mini-map {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    background-size: 640px 640px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 4px solid #ccc;
+    background-color: black;
+}
+
+.popup.mapGame-popup {
+    z-index: 10020;
+}
+
+.tile {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+}
+
+.tile.player::after {
+    content: '';
+    display: block;
+    width: 100%; height: 100%;
+    background: rgba(255, 99, 71, 0.9);
+    border-radius: 24px;
+    box-shadow: 0 0 6px rgba(255, 99, 71, 0.6);
+}
+
+.tile.wall::after {
+    content: '';
+    display: block;
+    width: 100%; height: 100%;
+}
+
+.tile.block::after {
+    content: '';
+    display: block;
+    width: 100%; height: 100%;
+}
+
+.tile.target::after {
+    content: '';
+    display: block;
+    width: 100%; height: 100%;
+    border-radius: 4px;
+}
+
+.tile.out::after {
+    content: '';
+    display: block;
+    width: 100%; height: 100%;
+    background: #192F3F;
+}
+
+.choice-popup .popup-content-btn-group {
+    flex-direction: column;
+}
+
+.choice-popup .popup-content-text {
+    font-size: 14px;
+}
+
+.popup-blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 10000;
+}
+
+@media (min-width: 640px) {
+
+        .popup.mini-map-popup {
+        width: 50%;
+        max-width: 500px;
+    }
+    
+    .popup.mini-map-popup .popup-content-text {
+        max-width: 85%;
+        font-size: 18px;
+        text-indent: -32px;
+        margin-left: 40px;
+        line-height: 24px;
+    }
+
+    .mini-map {
+        width: 320px;
+        height: 320px;
+        background-size: 1280px 1280x;
+        overflow: hidden;
+    }
+
+    .mini-map-controls {
+        margin-top: 8px;
+        flex-direction: row;
+        gap: 24px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+}

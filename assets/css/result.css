@@ -1,0 +1,263 @@
+/* ===== 폰트 설정 ===== */
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Jersey 25', 'DungGeunMo', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #54575C;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 17px;
+
+    background-color: #ECD4AD;
+    background-image: url(../images/webPageBg.png);
+    background-position: bottom;
+    background-size: 40%;
+    background-repeat: repeat-x;
+
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 8px solid transparent;
+    border-image: url('../images/contentMainBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    gap: 12px;
+}
+
+h1, h2, h3 {
+    color: #9A7F5C;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+hr {
+    border-color: #C7A880;
+    border-width: 1px;
+    color: none;
+    background: none;
+}
+
+#upper-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+}
+
+#user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    flex: 2;
+}
+
+#user-info {
+    border: 8px solid transparent;
+    border-image: url('../images/inputBoxBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    padding: 4px 12px;
+}
+
+#user-info p {
+    margin: 12px 4px;
+}
+
+#final-score {
+    border: 8px solid transparent;
+    border-image: url('../images/inputBoxBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    padding: 4px 12px;
+}
+
+#vocab-list {
+    border: 8px solid transparent;
+    border-image: url('../images/inputBoxBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    padding: 4px 12px;
+    flex: 4;
+}
+
+#vocab-list ul {
+    font-size: 16px;
+}
+
+#scene-summary {
+    border: 8px solid transparent;
+    border-image: url('../images/statusItemBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    padding: 4px 12px;
+}
+
+.scene {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+
+    border: 8px solid transparent;
+    border-image: url('../images/inputBoxBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    padding: 12px 12px;
+    margin-bottom: 8px;
+}
+
+.scene-text {
+    flex: 5;
+    margin-left: 8px;
+}
+
+.scene-text h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.scene-text p {
+    font-size: 14px;
+}
+
+.scene-text ul {
+    padding-left: 28px;
+}
+
+.scene .dialogueList {
+    color: rgb(66, 66, 152);
+}
+
+.scene .dialogueList li {
+    list-style-type: '💬 ';
+}
+
+.scene .goalList li {
+    list-style-type: '💡 ';
+}
+
+.scene-image {
+    background: #ccc;
+    flex: 3;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.scene-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#notes {
+    border: 8px solid transparent;
+    border-image: url('../images/inputBoxBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    padding: 4px 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+#notes textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+button {
+    background: none;
+    border: 8px solid transparent;
+    border-image: url('../images/contentMainBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+
+    width: 100%;
+
+    padding: 8px 24px;
+    font-size: 16px;
+    font-family: 'Jersey 25', 'DungGeunMo', sans-serif;
+
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.02);
+    filter: brightness(90%);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+@media print {
+
+    .scene {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    button {
+        display: none !important;
+    }
+
+    #notes {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}

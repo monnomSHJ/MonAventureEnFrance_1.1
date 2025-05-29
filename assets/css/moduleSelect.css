@@ -1,0 +1,103 @@
+.module-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 반응형 그리드 */
+    gap: 16px;
+    width: 90%;
+    max-width: 700px;
+    margin-top: 30px;
+    padding-bottom: 20px; /* 푸터에 겹치지 않도록 여백 추가 */
+    overflow-y: auto; /* 내용이 많아지면 스크롤 가능하도록 */
+    max-height: calc(100vh - 250px); /* 헤더, 푸터 공간 제외 */
+}
+
+.module-card {
+    border: 8px solid transparent;
+    border-image: url('../images/inputBoxBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+    padding: 15px;
+    background-color: #FFF1D4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease;
+    min-height: 180px; /* 카드 최소 높이 */
+}
+
+.module-card:hover {
+    transform: translateY(-5px); /* 호버 시 살짝 위로 이동 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.module-title {
+    font-size: 20px;
+    color: #9A7F5C;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.module-description {
+    font-size: 14px;
+    color: #54575C;
+    line-height: 1.4;
+    flex-grow: 1; /* 설명이 카드 내에서 공간을 채우도록 */
+    margin-bottom: 15px;
+}
+
+.select-module-btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #C7A880; /* 버튼 배경색 */
+    color: white; /* 버튼 글자색 */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    width: 80%; /* 버튼 너비 */
+    margin-top: auto; /* 버튼을 하단에 붙이기 */
+}
+
+.select-module-btn:hover {
+    background-color: #9A7F5C;
+    transform: scale(1.02);
+}
+
+.select-module-btn:active {
+    transform: scale(0.98);
+}
+
+#finish-game-btn {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 20px;
+    font-size: 20px;
+    background-color: #9A7F5C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#finish-game-btn:hover {
+    background-color: #7B624A;
+    transform: scale(1.02);
+}
+
+#finish-game-btn:active {
+    transform: scale(0.98);
+}
+
+#finish-game-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    filter: none;
+}
+
+@media (min-width: 640px) {
+
+}
