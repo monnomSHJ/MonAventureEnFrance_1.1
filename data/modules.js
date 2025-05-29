@@ -1,14 +1,14 @@
-import { getIntro2Scene } from "./scenes/intro2.js";
-import { getHotel5Scene } from "./scenes/hotel5.js";
+import { getIntro2Scene } from "./scenes/module1_toParis/intro2.js";
+import { getHotel5Scene } from "./scenes/module1_toParis/hotel5.js";
 
-import { getRestaurant1Scene } from "./scenes/restaurant1.js";
+import { getRestaurant1Scene } from "./scenes/module2_first_meal/restaurant1.js";
 import { getCafe4Scene } from "./scenes/cafe4.js";
 
 import { getEiffelTower1Scene } from "./scenes/eiffelTower1.js";
-import { getToilet3Scene } from "./scenes/toilet3.js";
+import { getToilet3Scene } from "./scenes/module3_promenade/toilet3.js";
 
-import { getToilet4Scene } from "./scenes/toilet4.js";
-import { getEnd1Scene } from "./scenes/end1.js";
+import { getToilet4Scene } from "./scenes/module3_promenade/toilet4.js";
+import { getEnd1Scene } from "./scenes/module4_newCity/end1.js";
 
 export const allModules = [
     {

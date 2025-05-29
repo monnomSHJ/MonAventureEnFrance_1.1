@@ -4,7 +4,7 @@ console.log("script.js 로드됨");
 import { loadDictionary } from "./dictionary.js";
 import { renderStatusBar, renderQuest } from './statusBar.js';
 import { loadScene, setupDialogueClick, setupDebugMenu } from './sceneManager.js';
-import { getIntro1Scene } from "./data/scenes/intro1.js";
+import { getIntro1Scene } from "./data/scenes/common/intro1.js";
 import { saveGameState, loadGameState } from "./saveLoad.js";
 
 // 상태 관리
