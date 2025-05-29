@@ -1,6 +1,7 @@
 import { state } from "../../script.js";
 import { renderQuest } from "../../statusBar.js";
 import { getToilet1Scene } from "./toilet1.js";
+import { createArtworkChoiceFunctions } from "../sceneHelpers.js";
 
 export function getLouvre3Scene() {
 
@@ -31,36 +32,7 @@ export function getLouvre3Scene() {
         ]
     };
 
-    function makeChoice(label) {
-        state.viewedArtworks.add(label);
-
-        const lines = artworks[label].map(line => ({ ...line }));
-
-        if (state.viewedArtworks.size < 4) {
-            lines.push({
-                speaker: "",
-                text: "",
-                showChoiceAgain: true,
-                choices: {
-                    prompt: "어떤 작품을 감상해볼까요?",
-                    options: () => makeOptions()
-                }
-            });
-        } else {
-            lines.push({ speaker: "📢", text: "모든 작품을 감상했습니다. 이제 다음으로 넘어가볼까요?" });
-        }
-        
-        return lines;
-    };
-
-    function makeOptions() {
-        return Object.keys(artworks).map(label => ({
-            label,
-            scoreDelta: 0,
-            insertLines: () => makeChoice(label),
-            disabled: state.viewedArtworks.has(label)
-        }));
-    }
+    const { makeOptions } = createArtworkChoiceFunctions(artworks, "viewedArtworks");
 
     return {
         id: "louvre3",

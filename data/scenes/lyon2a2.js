@@ -1,5 +1,6 @@
 import { state } from "../../script.js";
 import { getLyon2Scene } from "./lyon2.js";
+import { createArtworkChoiceFunctions } from "../sceneHelpers.js";
 
 export function getLyon2a2Scene() {
 
@@ -18,37 +19,7 @@ export function getLyon2a2Scene() {
         ]
     };
 
-    function makeChoice(label) {
-        state.viewedLyonArtworks.add(label);
-
-        const lines = artworks[label].map(line => ({ ...line }));
-
-        if (state.viewedLyonArtworks.size < 4) {
-            lines.push({
-                speaker: "",
-                text: "",
-                showChoiceAgain: true,
-                choices: {
-                    prompt: "어떤 작품을 감상해볼까요?",
-                    options: () => makeOptions()
-                }
-            });
-        } else {
-            lines.push(
-                { speaker: `👤 ${state.userName}`, text: "정말 색다르고 재미있는 곳이었다." });
-        }
-        
-        return lines;
-    };
-
-    function makeOptions() {
-        return Object.keys(artworks).map(label => ({
-            label,
-            scoreDelta: 0,
-            insertLines: () => makeChoice(label),
-            disabled: state.viewedLyonArtworks.has(label)
-        }));
-    }
+    const { makeOptions } = createArtworkChoiceFunctions(artworks, "viewedLyonArtworks");
 
     return {
         id: "lyon2a2",

@@ -1,5 +1,6 @@
 import { state } from "../../script.js";
 import { getBordeaux2Scene } from "./bordeaux2.js";
+import { createArtworkChoiceFunctions } from "../sceneHelpers.js";
 
 export function getBordeaux2c2Scene() {
 
@@ -36,37 +37,7 @@ export function getBordeaux2c2Scene() {
         ]
     };
 
-    function makeChoice(label) {
-        state.viewedBordeauxArtworks.add(label);
-
-        const lines = artworks[label].map(line => ({ ...line }));
-
-        if (state.viewedBordeauxArtworks.size < 4) {
-            lines.push({
-                speaker: "",
-                text: "",
-                showChoiceAgain: true,
-                choices: {
-                    prompt: "어떤 활동을 해볼까요?",
-                    options: () => makeOptions()
-                }
-            });
-        } else {
-            lines.push(
-                { speaker: `👤 ${state.userName}`, text: "정말 색다르고 재미있는 곳이었다." });
-        }
-        
-        return lines;
-    };
-
-    function makeOptions() {
-        return Object.keys(artworks).map(label => ({
-            label,
-            scoreDelta: 0,
-            insertLines: () => makeChoice(label),
-            disabled: state.viewedBordeauxArtworks.has(label)
-        }));
-    }
+    const { makeOptions } = createArtworkChoiceFunctions(artworks, "viewedBordeauxArtworks");
 
     return {
         id: "bordeaux2c2",

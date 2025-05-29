@@ -1,5 +1,6 @@
 import { state } from "../../script.js";
 import { getMarseille2Scene } from "./marseille2.js";
+import { createArtworkChoiceFunctions } from "../sceneHelpers.js";
 
 export function getMarseille2a2Scene() {
 
@@ -22,37 +23,7 @@ export function getMarseille2a2Scene() {
         ]
     };
 
-    function makeChoice(label) {
-        state.viewedMarseilleArtworks.add(label);
-
-        const lines = artworks[label].map(line => ({ ...line }));
-
-        if (state.viewedMarseilleArtworks.size < 4) {
-            lines.push({
-                speaker: "",
-                text: "",
-                showChoiceAgain: true,
-                choices: {
-                    prompt: "어떤 작품을 감상해볼까요?",
-                    options: () => makeOptions()
-                }
-            });
-        } else {
-            lines.push(
-                { speaker: `👤 ${state.userName}`, text: "정말 색다르고 재미있는 곳이었다." });
-        }
-        
-        return lines;
-    };
-
-    function makeOptions() {
-        return Object.keys(artworks).map(label => ({
-            label,
-            scoreDelta: 0,
-            insertLines: () => makeChoice(label),
-            disabled: state.viewedMarseilleArtworks.has(label)
-        }));
-    }
+    const { makeOptions } = createArtworkChoiceFunctions(artworks, "viewedMarseilleArtworks");
 
     return {
         id: "marseille2a2",

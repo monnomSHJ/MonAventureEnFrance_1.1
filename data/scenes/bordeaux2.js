@@ -3,6 +3,7 @@ import { getBordeaux2aScene } from "./bordeaux2a.js";
 import { getBordeaux2bScene } from "./bordeaux2b.js";
 import { getBordeaux2cScene } from "./bordeaux2c.js";
 import { getEnd1Scene } from "./end1.js";
+import { createCityExploreSceneFunctions } from "../sceneHelpers.js";
 
 export function getBordeaux2Scene() {
     if (!state.visitedBordeauxSpots) {
@@ -15,44 +16,17 @@ export function getBordeaux2Scene() {
         "La Cité du Vin": getBordeaux2cScene
     };
 
-    function makeOptions() {
-        return Object.keys(destinations).map(label => ({
-            label,
-            insertLines: [
-                { speaker: `👤 ${state.userName}`, text: `${label}에 가보자.` }
-            ],
-            customAction: () => {
-                state.visitedBordeauxSpots.add(label);
-                state.nextScene = destinations[label]();
-            },
-            disabled: state.visitedBordeauxSpots.has(label)
-        }));
-    };
-
-    function insertIntroLineIfAllVisited() {
-        if (state.visitedBordeauxSpots?.size === 3) {
-            return [
-                { speaker: `👤 ${state.userName}`, text: `보르도에서 가보고 싶은 곳을 모두 다녀왔다.` },
-                { speaker: `👤 ${state.userName}`, text: `이제 근처에서 저녁 식사라도 해야겠는 걸...` },
-                { speaker: `👤 ${state.userName}`, text: `처음 프랑스에 올 때에는 모든 것들이 낯설고 두려울 거라고만 생각했는데,` },
-                { speaker: `👤 ${state.userName}`, text: `막상 와서 부딪혀보니 생각보다 할 만하잖아?` },
-                { speaker: `👤 ${state.userName}`, text: `열심히 프랑스어를 공부한 보람이 있는 듯. 하하하.` },
-                { speaker: `👤 ${state.userName}`, text: `(꼬르륵)` },
-                { speaker: `👤 ${state.userName}`, text: `아 진짜 배고프다. 밥 먹으러 가야지.` },
-            ];
-                
-        }
-        return [];
-    }
+    const { makeOptions, insertIntroLineIfAllVisited } = createCityExploreSceneFunctions(
+        destinations, "visitedLyonSpots", getEnd1Scene
+    );
 
     return {
         id: "bordeaux2",
         background_img: "assets/images/bordeauxStreet.jpg",
         narration: "",
         lines:
-            state.visitedBordeauxSpots.size === 3
+            state.visitedBordeauxSpots.size === Object.keys(destinations).length
             ? [ ...insertIntroLineIfAllVisited() ]
-
             : state.visitedBordeauxSpots.size > 0
             ? [
                 {speaker: ``, text: ``,
