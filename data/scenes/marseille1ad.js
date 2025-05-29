@@ -1,6 +1,7 @@
 import { state } from "../../script.js";
 import { renderQuest } from "../../statusBar.js";
 import { getMarseille2Scene } from "./marseille2.js";
+import { createTransportQuizOptions } from "../sceneHelpers.js";
 
 export function getMarseille1adScene() {
 
@@ -18,36 +19,7 @@ export function getMarseille1adScene() {
             { speaker: ``, text: "",
                 choices: {
                     prompt: "다음 중 안내 방송에서 설명하는 내용으로 옳지 않은 것은?",
-                    options: [
-                        {
-                            label: "기차는 1분 뒤에 출발한다",
-                            scoreDelta: -1,
-                            insertLines: [
-                                { speaker: `📢`, text: `아쉽네요! 기차는 1분 뒤에 출발합니다. 1점이 차감되었습니다.` },
-                                { speaker: `📢`, text: `정답은 "전자담배 흡연은 가능하다"였습니다.` },
-                                { speaker: `📢`, text: `기차 내에서는 일반 담배와 전자담배 모두 흡연이 불가합니다.` },
-                                { speaker: `📢`, text: `"Il ne faut fumer ni cigarette ni vapoteuse dans tout le train."` },
-                            ],
-                        },
-                        {
-                            label: "전자담배 흡연은 가능하다",
-                            scoreDelta: 3,
-                            insertLines: [
-                                { speaker: `📢`, text: `정답입니다! 기차 내에서는 일반 담배와 전자담배 모두 흡연이 불가합니다. 3점이 추가되었습니다.` },
-                                { speaker: `📢`, text: `"Il ne faut fumer ni cigarette ni vapoteuse dans tout le train."` },
-                            ],
-                        },
-                                                {
-                            label: "안전벨트를 착용해야 한다",
-                            scoreDelta: -1,
-                            insertLines: [
-                                { speaker: `📢`, text: `아쉽네요! 기차는 1분 뒤에 출발합니다. 1점이 차감되었습니다.` },
-                                { speaker: `📢`, text: `정답은 "전자담배 흡연은 가능하다"였습니다.` },
-                                { speaker: `📢`, text: `기차 내에서는 일반 담배와 전자담배 모두 흡연이 불가합니다.` },
-                                { speaker: `📢`, text: `"Il ne faut fumer ni cigarette ni vapoteuse dans tout le train."` },
-                            ],
-                        },
-                    ]
+                    options: () => createTransportQuizOptions("기차")
                 }
              },
              { speaker: `📢`, text: `문제 푸느라 고생 많으셨습니다. 🥳` },

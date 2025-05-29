@@ -1,5 +1,6 @@
 import { state } from "../../script.js";
 import { getStrasbourg1ccScene } from "./strasbourg1cc.js";
+import { createPlatformChoiceOptions } from "../sceneHelpers.js";
 
 export function getStrasbourg1cbScene() {
 
@@ -13,7 +14,7 @@ export function getStrasbourg1cbScene() {
                 { speaker: "", text: " ", showChoiceAgain: true, 
                     choices: {
                         prompt: "어디로 가야 하지?",
-                        options: () => makePlatformOptions()
+                        options: () => createPlatformChoiceOptions("탑승구")
                     }
                 }
             ]
