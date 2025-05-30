@@ -124,6 +124,10 @@
     box-shadow: 0 0 6px rgba(255, 99, 71, 0.6);
 }
 
+.tile.player-custom-image::after {
+    content: none;
+}
+
 .tile.wall::after {
     content: '';
     display: block;

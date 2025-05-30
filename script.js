@@ -30,6 +30,7 @@ export const state = {
   sceneSummaries: [],
   hasSaveData: false,
   playerCharacter: null,
+  playerCharacterImage: null,
   currentModule: null,
   completedModules: new Set()
 };
@@ -44,7 +45,7 @@ const dictionaryOverlay = document.querySelector('.dictionary-overlay');
 // 초기화
 function init() {
   loadGameState();
-  
+
   // 단어장 이벤트 리스너 설정
   if (dictionaryPanelHeader && dictionaryOverlay) {
     dictionaryPanelHeader.addEventListener('click', () => {
@@ -112,6 +113,7 @@ if (location.pathname.includes("result")) {
       if (loadedState.viewedStrasbourgArtworks) state.viewedStrasbourgArtworks = new Set(loadedState.viewedStrasbourgArtworks);
       if (loadedState.viewedBordeauxArtworks) state.viewedBordeauxArtworks = new Set(loadedState.viewedBordeauxArtworks);
       if (loadedState.completedModules) state.completedModules = new Set(loadedState.completedModules);
+      if (loadedState.playerCharacterImage) state.playerCharacterImage = loadedState.playerCharacterImage;
 
       console.log("Result page: Loaded state from localStorage", state);
     } else {

@@ -38,6 +38,7 @@ export function getCharacterSelectScene() {
 }
 
 let selectedCharacterId = null;
+let selectedCharacterImg = null;
 
 function setupCharacterSelectEvents() {
     const characterCards = document.querySelectorAll('.character-card');
@@ -59,6 +60,7 @@ function setupCharacterSelectEvents() {
             characterCards.forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
             selectedCharacterId = card.dataset.characterId;
+            selectedCharacterImg = card.dataset.characterImage;
             checkStartButtonState();
         });
     });
@@ -80,6 +82,7 @@ function setupCharacterSelectEvents() {
 
         state.userName = inputName;
         state.playerCharacter = selectedCharacterId;
+        state.playerCharacterImage = selectedCharacterImg;
 
         popupHeaderTitle.textContent = "정보 확인";
         popupContentText.innerHTML = `

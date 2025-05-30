@@ -64,6 +64,13 @@ export function showMiniMapGame(scene) {
       
                 if (y === playerPos.y && x === playerPos.x) {
                     tile.classList.add('player');
+                    if (state.playerCharacterImage) {
+                        tile.style.backgroundImg = `url('${state.playerCharacterImage}')`;
+                        tile.style.backgroundSize = 'contain';
+                        tile.style.backgroundRepeat = 'no-repeat';
+                        tile.style.backgroundPostion = 'center';
+                        tile.classList.add('player-custom-image');
+                    }
                 } else if (
                     y >= 0 && y < map.length &&
                     x >= 0 && x < map[0].length
