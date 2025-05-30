@@ -11,9 +11,9 @@ export function getHotel2Scene() {
         lines: [
             { speaker: ``, text: `보증금 50유로를 지불했다.`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👮 Réceptionniste`, text: `Vous êtes dans la chambre 305, au troisième étage.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Le petit déjeuner est servi jusqu'à 9 heures,`, personImg: "assets/images/hotelPerson1.png" },
+            { speaker: `👮 Réceptionniste`, text: `Le petit déjeuner est servi jusqu'à 9 heures`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👮 Réceptionniste`, text: `et le départ doit se fait avant 11 heures.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Le restaurant est au deuxième étage, et il y a un salon au cinquième étage.`, personImg: "assets/images/hotelPerson1.png" },
+            { speaker: `👮 Réceptionniste`, text: `Le restaurant est au deuxième étage et il y a un salon au cinquième étage.`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👮 Réceptionniste`, text: `Et n'oubliez pas : pas de bruit après 22 heueres.`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👮 Réceptionniste`, text: `Vous voulez que je vous explique encore une fois ?`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: ``, text: `한 번 더 설명해달라고 부탁할까?`, personImg: "assets/images/hotelPerson1.png" },
@@ -24,7 +24,7 @@ export function getHotel2Scene() {
                         {
                             label: "아니요",
                             insertLines: [
-                                { speaker: `👤 ${state.userName}`, text: `Non, merci.`, personImg: "assets/images/hotelPerson1.png" }
+                                { speaker: `👤 ${state.userName}`, text: `Non merci.`, personImg: "assets/images/hotelPerson1.png" }
                             ]
 
                         },
