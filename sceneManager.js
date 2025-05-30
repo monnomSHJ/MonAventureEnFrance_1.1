@@ -157,7 +157,7 @@ export async function updateDialogue() {
     const bgContainer = document.getElementById("bg-container");
   
     const text = typeof line.text === 'function' ? line.text() : line.text;
-    const speaker = line.speaker || "";
+    const speaker = typeof line.speaker === 'function' ? line.speaker() : line.speaker || "";
   
     dialogueTextEl.innerHTML = `
         <div class="speaker">${speaker}</div>

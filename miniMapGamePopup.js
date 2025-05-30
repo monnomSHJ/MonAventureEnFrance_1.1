@@ -65,7 +65,7 @@ export function showMiniMapGame(scene) {
                 if (y === playerPos.y && x === playerPos.x) {
                     tile.classList.add('player');
                     if (state.playerCharacterImage) {
-                        tile.style.backgroundImg = `url('${state.playerCharacterImage}')`;
+                        tile.style.backgroundImage = `url('${state.playerCharacterImage}')`;
                         tile.style.backgroundSize = 'contain';
                         tile.style.backgroundRepeat = 'no-repeat';
                         tile.style.backgroundPostion = 'center';
