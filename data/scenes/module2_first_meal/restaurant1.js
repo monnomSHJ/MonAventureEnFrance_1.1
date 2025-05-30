@@ -36,11 +36,11 @@ const promptText = "👩‍💼 Pour aller au restaurant, sortez de l'hôtel, pu
         background_img: "assets/images/hotelLobbyMain.jpg",
         narration: "",
         miniMapGame: { map: fullMap, start, correctTargets, promptText, mapImg: "assets/images/restaurantMapGameBg.png" },
-        retryLines: [
+        retryLines: () => [
             { speaker: `👤 ${state.userName}`, text: "여기가 아닌 것 같은데... 다시 찾아가보자."},
             { speaker: `📢`, text: "1점이 차감되었습니다."}
         ],
-        lines: [
+        lines: () => [
             { speaker: `👤 ${state.userName}`, text: "자! 직원 분이 알려준 대로 식당을 찾아 가보자." },
             { speaker: "", text: "", miniGame: true},
             { speaker: `📢`, text: "길찾기 성공! 5점을 획득하였습니다."},

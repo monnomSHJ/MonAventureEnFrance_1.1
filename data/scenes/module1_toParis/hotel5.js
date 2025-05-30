@@ -7,8 +7,8 @@ export function getHotel5Scene() {
         id: "hotel5",
         background_img: "assets/images/hotelLobbyMain.jpg",
         narration: "",
-        retryLines: [],
-        lines: [
+        retryLines: () => [],
+        lines: () => [
             { speaker: `👤 ${state.userName}`, text: `일단 방에서 나오긴 했는데... 어디에 가야 할지를 모르겠네.` },
             { speaker: `👤 ${state.userName}`, text: `아직 아무 것도 못 먹었으니 식당에 가볼까?` },
             { speaker: `👤 ${state.userName}`, text: `아까 그 직원 분께 주변 식당을 추천받아 보자.` },

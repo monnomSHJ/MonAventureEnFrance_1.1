@@ -14,7 +14,7 @@ export function getToilet4Scene() {
         id: "toilet4",
         background_img: "assets/images/hotelRoomBg.jpg",
         narration: "",
-        lines: [
+        lines: () => [
             { speaker: `👤 ${state.userName}`, text: `방으로 돌아왔다.` },
             { speaker: `👤 ${state.userName}`, text: `오늘은 파리를 어느 정도 구경했으니까...` },
             { speaker: `👤 ${state.userName}`, text: `내일은 파리 말고 다른 지역을 놀러가고 싶은데.` },

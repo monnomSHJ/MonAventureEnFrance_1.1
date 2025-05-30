@@ -8,12 +8,12 @@ export function getCafe4Scene() {
         id: "cafe4",
         background_img: "assets/images/restaurantMainBg.png",
         narration: "",
-        retryLines: [
+        retryLines: () => [
             { speaker: `👨‍🍳 Serveur`, text: "Pardon ?", personImg: "assets/images/restaurantPerson1.png"},
             { speaker: `👤 ${state.userName}`, text: ".. 다시 한 번 시도해보자.", personImg: "assets/images/restaurantPerson1.png"},
             { speaker: `📢`, text: "1점이 차감되었습니다.", personImg: "assets/images/restaurantPerson1.png"}
         ],
-        lines: [
+        lines: () => [
             { speaker: `👤 ${state.userName}`, text: `다시 식당에 돌아왔다.` },
             { speaker: `👨‍🍳 Serveur`, text: `Bonjour.`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👤 ${state.userName}`, text: `Bonjour.`, personImg: "assets/images/restaurantPerson1.png" },
