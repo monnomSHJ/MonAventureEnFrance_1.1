@@ -23,8 +23,7 @@ export function getRestaurant3Scene() {
             { speaker: `📢`, text: "식당에 들어가서 웨이터에게 인원수를 말하면, 웨이터가 적당한 자리로 안내해줄 겁니다.", overlayImg: `assets/images/restaurantOverlay.png` },
             { speaker: `📢`, text: "이 웨이터는 대체로 주문에서부터 계산까지 여러분을 담당하기 때문에, 다른 웨이터에게 서비스를 요청하지 않도록 유의하는 것이 좋습니다.", overlayImg: `assets/images/restaurantOverlay.png` },
             { speaker: `📢`, text: "또한 웨이터에게 요청 사항이 있을 경우, 큰 소리로 부르는 것은 상당히 무례한 행동으로 인식되기 때문에,", overlayImg: `assets/images/restaurantOverlay.png` },
-            { speaker: `📢`, text: "필요한 게 있다면 웨이터와 눈을 마주치고 살짝 손을 들거나,", overlayImg: `assets/images/restaurantOverlay.png` },
-            { speaker: `📢`, text: "웨이터가 지나갈 때 작은 목소리로 부르는 것이 좋습니다.", overlayImg: `assets/images/restaurantOverlay.png` },
+            { speaker: `📢`, text: "필요한 게 있다면 웨이터와 눈을 마주치고 살짝 손을 들거나, 웨이터가 지나갈 때 작은 목소리로 부르는 것이 좋습니다.", overlayImg: `assets/images/restaurantOverlay.png` },
             { speaker: `📢`, text: "프랑스에서 식당을 방문할 때 꼭 유의하시길 바랍니다!", overlayImg: `assets/images/restaurantOverlay.png` },
         ],
         

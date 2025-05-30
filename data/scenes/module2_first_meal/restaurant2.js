@@ -9,11 +9,11 @@ export function getRestaurant2Scene() {
         narration: "",
         lines: [
             { speaker: `👨‍🍳 Serveur`, text: "Bonjour ! Vous êtes combien ?", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👤 ${state.userName}`, text: "Oui, bonjour. Une personne.", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👤 ${state.userName}`, text: "Oui, bonjour. Je suis seul.", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👨‍🍳 Serveur`, text: "D'accord. Une table pour une personne. Suivez-moi, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: "직원 분을 따라 자리를 잡았다.", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👨‍🍳 Serveur`, text: "Voilà, le menu.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/restaurantMenu.png" },
-            { speaker: `👨‍🍳 Serveur`, text: "Nous avons le temps de choisir, ne vous pressez pas.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/restaurantMenu.png" },
+            { speaker: `👨‍🍳 Serveur`, text: "Prenez votre temps pour choisir, ne vous pressez pas.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/restaurantMenu.png" },
             { speaker: `👤 ${state.userName}`, text: "Oui, merci.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/restaurantMenu.png" },
             { speaker: `👤 ${state.userName}`, text: "메뉴판을 보고 먹고 싶은 메뉴를 고민해보자.", overlayImg: "assets/images/restaurantMenu.png" },
             { speaker: `👤 ${state.userName}`, text: "음... 그런데 여기 있는 'salade niçoise'가 뭐지?", overlayImg: "assets/images/restaurantMenu.png" },
@@ -30,16 +30,16 @@ export function getRestaurant2Scene() {
                                 { speaker: `👤 ${state.userName}`, text: `...` },
                                 { speaker: ``, text: `필사적으로 직원 분과 눈을 마주치기 위해 노력했다.` },
                                 { speaker: ``, text: `나와 눈이 마주친 직원 분이 나에게로 다가왔다.` },
-                                { speaker: `👨‍🍳 Serveur`, text: "Avez-vous fini de choisir votre plat ?", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👨‍🍳 Serveur`, text: "Avez-vous choisi votre plat ?", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                         },
                         {
                             label: `작게 "S'il vous plaît"라고 말하기`,
                             scoreDelta: 0,
                             insertLines: [
-                                { speaker: `👤 ${state.userName}`, text: `S'il vous plaît.` },
+                                { speaker: `👤 ${state.userName}`, text: `S'il vous plaît !` },
                                 { speaker: ``, text: `나의 목소리를 들은 직원 분이 나에게로 다가왔다.` },
-                                { speaker: `👨‍🍳 Serveur`, text: "Avez-vous fini de choisir votre plat ?", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👨‍🍳 Serveur`, text: "Avez-vous choisi votre plat ?", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                         },
                         {
@@ -50,7 +50,7 @@ export function getRestaurant2Scene() {
                                 { speaker: `👨‍🍳 Serveur`, text: "...", personImg: "assets/images/restaurantPerson1.png" },
                                 { speaker: `👨‍🍳 Serveur`, text: "......", personImg: "assets/images/restaurantPerson1.png" },
                                 { speaker: ``, text: `... 싸늘하다.`, personImg: "assets/images/restaurantPerson1.png" },
-                                { speaker: `👨‍🍳 Serveur`, text: "... Avez-vous fini de choisir votre plat ?", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👨‍🍳 Serveur`, text: "... Avez-vous choisi votre plat ?", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                         }
                     ]
@@ -58,12 +58,12 @@ export function getRestaurant2Scene() {
             },
             { speaker: `👤 ${state.userName}`, text: "Oui, mais j'ai une question.", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👤 ${state.userName}`, text: "Une salade niçoise, qu'est-ce que c'est ?", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👨‍🍳 Serveur`, text: "Bien sûr ! La salade niçoise est une salade traditionnelle du sud de la France.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/salade-nicoise.jpg" },
-            { speaker: `👨‍🍳 Serveur`, text: "Elle contient généralement des tomates, des œufs durs, du thon, des olives, des haricots verts et des pommes de terre.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/salade-nicoise.jpg" },
+            { speaker: `👨‍🍳 Serveur`, text: "La salade niçoise, c'est une salade traditionnelle du sud de la France.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/salade-nicoise.jpg" },
+            { speaker: `👨‍🍳 Serveur`, text: "Elle contient généralement des tomates, un œuf dur, du thon, des olives, des haricots verts et des pommes de terre.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/salade-nicoise.jpg" },
             { speaker: `👨‍🍳 Serveur`, text: "C'est une salade fraîche et très complète.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/salade-nicoise.jpg" },
             { speaker: `👤 ${state.userName}`, text: "Merci beaucoup !", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👨‍🍳 Serveur`, text: "Alors, qu'est-ce que vous voulez ?", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👤 ${state.userName}`, text: "J'ai envie de manger ...", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👨‍🍳 Serveur`, text: "Alors ? Que souhaitez-vous commander ?", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👤 ${state.userName}`, text: "Je vais prendre ...", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: ``,
                 choices: {
                     prompt: "뭘 먹어볼까?",
@@ -72,7 +72,7 @@ export function getRestaurant2Scene() {
                             label: "Des pâtes - 8,00 €",
                             scoreDelta: 0,
                             insertLines: [
-                                { speaker: `👤 ${state.userName}`, text: "J'ai envie de manger des pâtes, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👤 ${state.userName}`, text: "Je vais prendre une assiette de pâtes, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                             customAction: () => {
                                 state.selectedDish = {
@@ -86,7 +86,7 @@ export function getRestaurant2Scene() {
                             label: "Un steak-frites - 12,00 €",
                             scoreDelta: 0,
                             insertLines: [
-                                { speaker: `👤 ${state.userName}`, text: "J'ai envie de manger un steak-frites, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👤 ${state.userName}`, text: "Je vais prendre un steak-frites, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                             customAction: () => {
                                 state.selectedDish = {
@@ -100,7 +100,7 @@ export function getRestaurant2Scene() {
                             label: "Une salade niçoise - 7,00 €",
                             scoreDelta: 0,
                             insertLines: [
-                                { speaker: `👤 ${state.userName}`, text: "J'ai envie de manger une salade niçoise, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👤 ${state.userName}`, text: "Je vais prendre une salade niçoise, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                             customAction: () => {
                                 state.selectedDish = {
@@ -114,7 +114,7 @@ export function getRestaurant2Scene() {
                             label: "Une pizza - 9,00 €",
                             scoreDelta: 0,
                             insertLines: [
-                                { speaker: `👤 ${state.userName}`, text: "J'ai envie de manger une pizza, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
+                                { speaker: `👤 ${state.userName}`, text: "Je vais prendre une pizza, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
                             ],
                             customAction: () => {
                                 state.selectedDish = {
@@ -127,10 +127,10 @@ export function getRestaurant2Scene() {
                     ]
                 }
             },
-            { speaker: `👨‍🍳 Serveur`, text: "Très bien. C'est tout ?", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👤 ${state.userName}`, text: "Oui, c'est tout.", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👨‍🍳 Serveur`, text: "D'accord. Attendez un peu, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👨‍🍳 Serveur`, text: "Je vais vous apporter un peu de pain en plus.", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👨‍🍳 Serveur`, text: "Très bien. Ce sera tout ?", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👤 ${state.userName}`, text: "Oui, c'est tout. Merci.", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👨‍🍳 Serveur`, text: "D'accord. C'est noté.", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👨‍🍳 Serveur`, text: "Je vous apporte un peu de pain en plus.", personImg: "assets/images/restaurantPerson1.png" },
         ],
 
         nextScene: () => {

@@ -1,6 +1,5 @@
 import { state } from "../../../script.js";
 import { renderQuest } from "../../../statusBar.js";
-import { getEiffelTower1Scene } from "../module3_promenade/eiffelTower1.js";
 
 export function getCafe4Scene() {
 
@@ -16,7 +15,7 @@ export function getCafe4Scene() {
         lines: [
             { speaker: () => `👤 ${state.userName}`, text: `다시 식당에 돌아왔다.` },
             { speaker: `👨‍🍳 Serveur`, text: `Bonjour.`, personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: () => `👤 ${state.userName}`, text: `Bonjour.`, personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: () => `👤 ${state.userName}`, text: `Excusez-moi ...`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: () => `👤 ${state.userName}`, text: `...`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: `문제 상황이라 그런지 머리가 잘 안 돌아간다...`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: `침착하게 프랑스어로 내 상황을 설명해야 한다.`, personImg: "assets/images/restaurantPerson1.png" },
@@ -32,15 +31,15 @@ export function getCafe4Scene() {
             { speaker: `📢`, text: "문장 만들기 성공! 5점을 획득하였습니다.", personImg: "assets/images/restaurantPerson1.png"},
             { speaker: ``, text: ``, personImg: "assets/images/restaurantPerson1.png",
                 production: {
-                    prompt: "Je _ que j'ai _ _ ici.",
+                    prompt: "Je _ avoir _ _ ici.",
                     meaning: "제 생각에 여기에서 제가 뭔가를 잃어버린 것 같아요.",
                     words: ["mangé", "pense", "penses", "oublié", "quelque chose", "quelqu'un"],
                     answer: ["pense", "oublié", "quelque chose"]
                 }
             },
-            { speaker: () => `👤 ${state.userName}`, text: `Je pense que j'ai oublié quelque chose ici.`, personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: () => `👤 ${state.userName}`, text: `Je pense avoir oublié quelques chose ici.`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `📢`, text: "문장 만들기 성공! 5점을 획득하였습니다.", personImg: "assets/images/restaurantPerson1.png"},
-            { speaker: `👨‍🍳 Serveur`, text: `Vous avez oublié quoi ?`, personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👨‍🍳 Serveur`, text: `Qu'avez-vous oublié ?`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: () => `👤 ${state.userName}`, text: `Je pense que j'ai oublié un petit sac noir ici.`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: ``, personImg: "assets/images/restaurantPerson1.png",
                 production: {
@@ -52,7 +51,7 @@ export function getCafe4Scene() {
             },
             { speaker: () => `👤 ${state.userName}`, text: `Est-ce que vous l'avez vu ?`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `📢`, text: "문장 만들기 성공! 5점을 획득하였습니다.", personImg: "assets/images/restaurantPerson1.png"},
-            { speaker: `👨‍🍳 Serveur`, text: `Il n'y a plus rien ici.`, personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👨‍🍳 Serveur`, text: `Non, il n'y a rien ici.`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👨‍🍳 Serveur`, text: `Peut-être que quelqu'un l'a pris.`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: () => `👤 ${state.userName}`, text: `Ah d'accord, merci beaucoup...`, personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: `이런... 앞으로는 조금 더 조심해야겠다. 🥲` },
@@ -61,12 +60,13 @@ export function getCafe4Scene() {
             { speaker: ``, text: `...` },
             { speaker: ``, text: `아, 참! 파리에 왔으면 에펠탑을 보러 가야지.` },
             { speaker: ``, text: `가는 방법을 인터넷에서 찾아보자.` },
+            { speaker: `📢`, text: `모듈 2 완료! 모듈 선택 화면으로 돌아갑니다.`}
         ],
 
         nextScene: () => {
-            state.currentQuest = "에펠탑";
+            state.currentQuest = "";
             renderQuest();
-            return getEiffelTower1Scene();
+            return null;
         }
     }
 }
