@@ -19,7 +19,7 @@ export function getCharacterSelectScene() {
                 <p class="selection-title">캐릭터를 선택하세요</p>
                 <div class="character-selection-container">
                     ${characters.map(char => `
-                        <div class="character-card" data-character-id="${char.id}">
+                        <div class="character-card" data-character-id="${char.id}" data-character-image="${char.image}">
                             <img src="${char.image}" alt="${char.name}" class="character-image" />
                         </div>
                     `).join('')}
