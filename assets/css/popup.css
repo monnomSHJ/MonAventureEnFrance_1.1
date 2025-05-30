@@ -210,7 +210,7 @@
     }
     
     .popup-header-title {
-        font-size: 20px;
+        font-size: 18px;
     }
       
     .popup-header-close-btn {  
@@ -224,7 +224,7 @@
     }
 
     .popup-content p {
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 8px;
         margin-bottom: 8px;
     }

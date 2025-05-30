@@ -41,7 +41,6 @@ export function getAirport4Scene() {
             { speaker: `👤 ${state.userName}`, text: `Merci ! (뿌듯)`},
             { speaker: ``, text: `나는 그렇게 택시 기사님과 스몰토크를 나누며 숙소로 이동했다.`},
             { speaker: `📢`, text: "유후! 이제 정말 프랑스 여행에 익숙해지신 것 같네요!"},
-            { speaker: `📢`, text: "아주 잘하고 있습니다."},
             { speaker: `📢`, text: "여기서 잠깐 토막상식!", overlayImg: "assets/images/taxiOverlay.jpeg"},
             { speaker: `📢`, text: "프랑스, 특히 파리의 공항택시는 2016년부터 정찰제 요금(tarifs forfaitaires) 제도를 시행하고 있습니다.", overlayImg: "assets/images/airportTaxi1.png"},
             { speaker: `📢`, text: "이에 따라, 공항과 파리 시내 사이 구간에 대해 고정 요금이 적용됩니다.", overlayImg: "assets/images/airportTaxi1.png"},

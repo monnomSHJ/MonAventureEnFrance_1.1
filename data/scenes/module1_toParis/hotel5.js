@@ -1,5 +1,6 @@
 import { state } from "../../../script.js";
 import { getRestaurant1Scene } from "../module2_first_meal/restaurant1.js";
+import { renderQuest } from "../../../statusBar.js";
 
 export function getHotel5Scene() {
 
@@ -25,10 +26,13 @@ export function getHotel5Scene() {
             { speaker: `👮 Réceptionniste`, text: `n'hésitez pas à demander de l'aide aux passants. Ils seront ravis de vous aider.`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👤 ${state.userName}`, text: `Merci beaucoup !`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👮 Réceptionniste`, text: `Avec plaisir. Bonne journée !`, personImg: "assets/images/hotelPerson1.png" },
+            { speaker: `📢`, text: `모듈 1 완료! 모듈 선택 화면으로 돌아갑니다.`}
         ],
         
         nextScene: () => {
-            return getRestaurant1Scene();
+            state.currentQuest = "";
+            renderQuest();
+            return null;
         }
     }
 }

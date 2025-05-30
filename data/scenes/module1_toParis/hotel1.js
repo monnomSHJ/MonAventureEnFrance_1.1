@@ -11,8 +11,7 @@ export function getHotel1Scene() {
         retryLines: [],
         lines: [
             { speaker: `👤 ${state.userName}`, text: `호텔 로비에 도착했다.` },
-            { speaker: `👤 ${state.userName}`, text: `프론트에 가서 체크인을 해야겠지?` },
-            { speaker: `👤 ${state.userName}`, text: `프론트로 가보자.` },
+            { speaker: `👤 ${state.userName}`, text: `프론트에 가서 체크인을 해야겠지? 프론트로 가보자.` },
             { speaker: `👮 Réceptionniste`, text: `Bonjour ! Avez-vous une réservation ?`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👤 ${state.userName}`, text: `Oui. Je m'appelle ${state.userName}.`,personImg: "assets/images/hotelPerson1.png" },
             { speaker: `👮 Réceptionniste`, text: `Merci. Je vais vérifier... Et votre passeport, s'il vous plaît ?`, personImg: "assets/images/hotelPerson1.png"},

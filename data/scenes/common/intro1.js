@@ -85,7 +85,7 @@ export function setupIntroEvents() {
 
       // 기존 저장 데이터가 있으면 확인 팝업 띄우기
       if (localStorage.getItem('gameState')) {
-        popupHeaderTitle.textContent = "알림";
+        popupHeaderTitle.textContent = "⚠️ 알림";
         popupContentText.innerHTML = "<p>새로 시작하면 기존 저장 데이터가 사라집니다.<br />계속하시겠습니까?</p>"
 
         btn1.textContent = "취소";
