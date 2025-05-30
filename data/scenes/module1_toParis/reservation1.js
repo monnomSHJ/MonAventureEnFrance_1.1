@@ -60,7 +60,9 @@ function setupReservationUI() {
             popupHeaderTitle.textContent = hotel.name;
             popupContentText.innerHTML = hotel.descriptionLines.map(line => `<p>${line}</p>`).join("");
 
+            btn1.classList.remove('hidden');
             btn1.textContent = "다른 숙소 보기";
+            btn2.classList.remove('hidden');
             btn2.textContent = "숙소 선택하기";
             btn3.classList.add('hidden');
 
