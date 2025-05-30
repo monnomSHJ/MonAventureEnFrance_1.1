@@ -420,6 +420,29 @@ body {
     padding: 8px;
 }
 
+.start-options {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.start-options .button {
+    background: transparent;
+    flex: 1;
+    padding: 8px 22px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.start-options .button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none; /* 비활성화 시 hover/active 효과 제거 */
+    filter: none;
+}
+
 .main-title {
     border: 8px solid transparent;
     border-image: url('../images/statusItemBg.png');

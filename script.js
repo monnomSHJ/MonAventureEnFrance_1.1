@@ -43,6 +43,8 @@ const dictionaryOverlay = document.querySelector('.dictionary-overlay');
 
 // 초기화
 function init() {
+  loadGameState();
+  
   // 단어장 이벤트 리스너 설정
   if (dictionaryPanelHeader && dictionaryOverlay) {
     dictionaryPanelHeader.addEventListener('click', () => {

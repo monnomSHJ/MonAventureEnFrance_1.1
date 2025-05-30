@@ -11,27 +11,44 @@ export function getModuleSelecteScene() {
         background_img: "",
         narration: "",
         lines: [],
-        contentHTML: `
-            <div id="module-select-screen" class="intro-screen">
-                <h1 class="main-title">모듈 선택</h1>
-                <div class="module-cards-container">
-                    ${allModules.map(module => `
-                        <div class="module-card" data-module-id="${module.id}">
-                            <h3 class="module-title">${module.name} ${state.completedModules.has(module.id) ? '✅' : ''}</h3>
-                            <p class="module-description">${module.description}</p>
-                            <button class="select-module-btn button" data-module-id="${module.id}">
-                                ${state.completedModules.has(module.id) ? '다시하기' : '시작하기'}
-                            </button>
-                        </div>
-                    `).join('')}
-                </div>
-                <button id="finish-game-btn" class="button" ${state.completedModules.size === allModules.length ? '' : 'disabled'}>
-                    모든 모듈 완료! 결과 확인하기
-                </button>
-            </div>
-        `,
+        contentHTML: generateModuleSelectHTML(),
         onMount: setupModuleSelectEvents
     };
+}
+
+function generateModuleSelectHTML() {
+    let moduleCardsHTML = ``;
+
+    allModules.forEach((module, index) => {
+        const isCompleted = state.completedModules.has(module.id);
+        const isPlayable = index === 0 || state.completedModules.has(allModules[index - 1]?.id);
+        const isDisabled = isCompleted || !isPlayable;
+        const buttonText = isCompleted ? '모듈 완료✅' : (isPlayable ? '시작하기' : '잠겨있음');
+
+        moduleCardsHTML += `
+            <div class="module-card" ${isCompleted ? 'completed' : ''}" data-module-id="${module.id}">
+                <h3 class="module-title">${module.name}</h3>
+                <p class="module-description">${module.description}</p>
+                <button class="select-module-btn button" data-module-id="${module.id}" ${isDisabled ? 'disabled' : ''}>
+                    ${buttonText}
+                </button>
+            </div>
+        `;
+    });
+
+    const isAllModulesCompleted = state.completedModules.size === allModules.length;
+
+    return `
+        <div id="module-select-screen" class="intro-screen">
+            <div class="module-information">각 모듈을 순서대로 플레이한 뒤,<br>결과 확인 버튼을 누르면 최종 결과페이지로 이동합니다.</div>
+            <div class="module-cards-container">
+                ${moduleCardsHTML}
+            </div>
+            <button id="finish-game-btn" class="button" ${isAllModulesCompleted ? '' : 'disabled'}>
+                결과 확인하기
+            </button>
+        </div>
+    `;
 }
 
 function setupModuleSelectEvents() {
@@ -54,6 +71,10 @@ function setupModuleSelectEvents() {
 
             if (!module) {
                 console.error("모듈을 찾을 수 없습니다:", moduleId);
+                return;
+            }
+
+            if (state.completedModules.has(moduleId)) {
                 return;
             }
 

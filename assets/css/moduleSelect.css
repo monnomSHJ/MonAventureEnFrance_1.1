@@ -1,13 +1,35 @@
-.module-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 반응형 그리드 */
-    gap: 16px;
+.module-select-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
+
+.module-information {
+    font-size: 16px;
+    font-weight: 100;
     width: 90%;
+    border: 8px solid transparent;
+    border-image: url('../images/statusItemBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+    padding: 4px 12px;
+}
+
+.module-cards-container {
+    display: flex;
+    flex-direction: column;
+    border: 8px solid transparent;
+    border-image: url('../images/statusItemBg.png');
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+    margin-top: 8px;
+    gap: 8px;
+    width: 100%;
     max-width: 700px;
-    margin-top: 30px;
-    padding-bottom: 20px; /* 푸터에 겹치지 않도록 여백 추가 */
-    overflow-y: auto; /* 내용이 많아지면 스크롤 가능하도록 */
-    max-height: calc(100vh - 250px); /* 헤더, 푸터 공간 제외 */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    overflow-y: auto;
 }
 
 .module-card {
@@ -15,47 +37,50 @@
     border-image: url('../images/inputBoxBg.png');
     border-image-slice: 20 fill;
     border-image-width: 8px;
-    padding: 15px;
-    background-color: #FFF1D4;
+    padding: 8px 12px;
+    margin: 0 8px;
+    background: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
     transition: all 0.2s ease;
-    min-height: 180px; /* 카드 최소 높이 */
+}
+
+.module-card.completed {
+    border: 8px solid transparent;
+    border-image-slice: 20 fill;
+    border-image-width: 8px;
+    border-image: url('../images/hotelCardSelected.png');
 }
 
 .module-card:hover {
     transform: translateY(-5px); /* 호버 시 살짝 위로 이동 */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .module-title {
-    font-size: 20px;
+    font-size: 18px;
     color: #9A7F5C;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .module-description {
     font-size: 14px;
     color: #54575C;
-    line-height: 1.4;
-    flex-grow: 1; /* 설명이 카드 내에서 공간을 채우도록 */
-    margin-bottom: 15px;
+    line-height: 1.2;
+    flex-grow: 1;
+    margin-bottom: 14px;
 }
 
 .select-module-btn {
-    padding: 8px 15px;
-    font-size: 16px;
-    background-color: #C7A880; /* 버튼 배경색 */
-    color: white; /* 버튼 글자색 */
-    border: none;
+    padding: 4px 0;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.2s ease;
-    width: 80%; /* 버튼 너비 */
+    width: 100%;
     margin-top: auto; /* 버튼을 하단에 붙이기 */
 }
 
@@ -70,34 +95,39 @@
 
 #finish-game-btn {
     margin-top: 20px;
-    width: 90%;
-    max-width: 300px;
-    padding: 12px 20px;
-    font-size: 20px;
-    background-color: #9A7F5C;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-}
-
-#finish-game-btn:hover {
-    background-color: #7B624A;
-    transform: scale(1.02);
-}
-
-#finish-game-btn:active {
-    transform: scale(0.98);
-}
-
-#finish-game-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-    filter: none;
+    width: 80%;
 }
 
 @media (min-width: 640px) {
 
+    .module-information {
+        width: 93%;
+        padding: 8px 18px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .module-cards-container {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .module-card {
+        flex: 1;
+        padding: 8px 4px;
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .module-title {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .module-description {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
 }

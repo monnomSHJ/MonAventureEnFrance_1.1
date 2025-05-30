@@ -1,6 +1,7 @@
 import { state } from "../../../script.js";
 import { loadScene, overlay } from "../../../sceneManager.js";
 import { renderStatusBar } from "../../../statusBar.js";
+import { getModuleSelecteScene } from "./moduleSelect.js";
 
 const characters = [
     { id: "ch1", name: "철수", image: "assets/images/character_cheolsoo.png"},
@@ -15,12 +16,11 @@ export function getCharacterSelectScene() {
         lines: [],
         contentHTML: `
             <div id="character-select-screen" class="intro-screen">
-                <h1 class="main-title">캐릭터를 선택하세요</h1>
+                <p class="selection-title">캐릭터를 선택하세요</p>
                 <div class="character-selection-container">
                     ${characters.map(char => `
                         <div class="character-card" data-character-id="${char.id}">
                             <img src="${char.image}" alt="${char.name}" class="character-image" />
-                            <p class="character-name">${char.name}</p>
                         </div>
                     `).join('')}
                 </div>
@@ -83,8 +83,7 @@ function setupCharacterSelectEvents() {
 
         popupHeaderTitle.textContent = "정보 확인";
         popupContentText.innerHTML = `
-            <p>캐릭터: ${characters.find(c => c.id === selectedCharacterId)?.name}</p>
-            <p>이름: ${state.userName}</p>
+            <p>✅ 이름: ${state.userName}</p><hr>
             <p>위 정보로 게임을 시작하시겠습니까?</p>
         `;
 

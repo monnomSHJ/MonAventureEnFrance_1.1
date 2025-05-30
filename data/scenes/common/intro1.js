@@ -3,6 +3,7 @@ import { loadScene, overlay } from "../../../sceneManager.js";
 import { renderStatusBar } from "../../../statusBar.js";
 import { loadGameState, saveGameState } from "../../../saveLoad.js";
 import { getCharacterSelectScene } from "./characterSelect.js";
+import { getModuleSelecteScene } from "./moduleSelect.js";
 
 export function getIntro1Scene() {
     return {
@@ -42,6 +43,11 @@ export function setupIntroEvents() {
   // '불러오기' 버튼의 활성화 상태 업데이트
   if (loadGameBtn) {
     loadGameBtn.disabled = !localStorage.getItem('gameState');
+  }
+
+  function closePopup() {
+    popup.classList.add("hidden");
+    overlay.classList.remove("show");
   }
 
   // 새로 시작 버튼 클릭
@@ -96,7 +102,7 @@ export function setupIntroEvents() {
           overlay.classList.remove('show');
         };
 
-        btn2.onClick = () => {
+        btn2.onclick = () => {
           closePopup();
           confirmNewGame();
         };
@@ -142,11 +148,5 @@ export function setupIntroEvents() {
         btn1.onclick = closePopup;
       }
     });
-  }
-
-
-  function closePopup() {
-    popup.classList.add("hidden");
-    overlay.classList.remove("show");
   }
 }

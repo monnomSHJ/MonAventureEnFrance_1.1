@@ -1,18 +1,28 @@
+#character-select-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-title {
+    font-size: 18px;
+}
+
 .character-selection-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
     margin-bottom: 30px;
 }
 
 .character-card {
+    border-radius: 12px;
     border: 8px solid transparent;
     border-image: url('../images/inputBoxBg.png');
     border-image-slice: 20 fill;
     border-image-width: 8px;
     padding: 10px;
     cursor: pointer;
-    background-color: #f0f0f0; /* 기본 배경색 */
+    background: transparent;
     transition: all 0.2s ease;
     text-align: center;
 }
@@ -35,52 +45,22 @@
 }
 
 .character-image {
-    width: 120px; /* 이미지 크기 조절 */
-    height: 120px;
+    width: 80px; /* 이미지 크기 조절 */
+    height: 80px;
     object-fit: contain;
-    margin-bottom: 10px;
     border-radius: 5px; /* 모서리 둥글게 */
-}
-
-.character-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #54575C;
-    margin: 0;
-}
-
-.start-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 20px;
-}
-
-.start-options .button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 8px;
-}
-
-.start-options .button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none; /* 비활성화 시 hover/active 효과 제거 */
-    filter: none;
 }
 
 .name-input-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
 }
 
 .name-input-box label {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     width: 100%;
     text-align: center;
@@ -88,8 +68,8 @@
 
 .name-input-box-group {
     display: flex;
-    flex-direction: row;
-    gap: 4px;
+    flex-direction: column;
+    gap: 8px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -114,7 +94,8 @@
     font-family: 'Jersey 25', 'DungGeunMo';
     font-size: 14px;
     font-weight: 500;
-    width: 100px;
+    flex: 1;
+    min-width: 0;
     flex-shrink: 0;
     padding: 4px;
     border: 8px solid transparent;
@@ -137,14 +118,23 @@
 
 @media (min-width: 640px) {
 
+    .character-image {
+        width: 120px; /* 이미지 크기 조절 */
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 5px; /* 모서리 둥글게 */
+    }
+
     .name-input-box label {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 18px;
     }
     
     .name-input-box-group {
         gap: 12px;
         width: 100%;
+        flex-direction: row;
     }
     
     .name-input-box-group input {
@@ -156,6 +146,7 @@
     }
     
     .name-input-box-group button {
+        flex: none;
         font-size: 16px;
         width: 160px;
         padding: 6px 12px;
