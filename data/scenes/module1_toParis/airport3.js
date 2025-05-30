@@ -1,4 +1,4 @@
-import { state } from "../../script.js";
+import { state } from "../../../script.js";
 import { getAirport4Scene } from "./airport4.js";
 
 export function getAirport3Scene() {

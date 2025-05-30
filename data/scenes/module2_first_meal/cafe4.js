@@ -1,6 +1,6 @@
-import { state } from "../../script.js";
-import { renderQuest } from "../../statusBar.js";
-import { getEiffelTower1Scene } from "./eiffelTower1.js";
+import { state } from "../../../script.js";
+import { renderQuest } from "../../../statusBar.js";
+import { getEiffelTower1Scene } from "../module3_promenade/eiffelTower1.js";
 
 export function getCafe4Scene() {
 

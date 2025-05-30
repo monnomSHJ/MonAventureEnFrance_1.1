@@ -1,5 +1,5 @@
-import { state } from "../../script.js";
-import { renderQuest } from "../../statusBar.js";
+import { state } from "../../../script.js";
+import { renderQuest } from "../../../statusBar.js";
 import { getLouvre1Scene } from "./louvre1.js";
 
 export function getEiffelTower2Scene() {

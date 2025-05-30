@@ -1,5 +1,5 @@
 import { state } from "../../../script.js";
-import { getToilet2Scene } from "../toilet2.js";
+import { getToilet2Scene } from "./toilet2.js";
 
 export function getToilet1Scene() {
 

@@ -2,9 +2,9 @@ import { getIntro2Scene } from "./scenes/module1_toParis/intro2.js";
 import { getHotel5Scene } from "./scenes/module1_toParis/hotel5.js";
 
 import { getRestaurant1Scene } from "./scenes/module2_first_meal/restaurant1.js";
-import { getCafe4Scene } from "./scenes/cafe4.js";
+import { getCafe4Scene } from "./scenes/module2_first_meal/cafe4.js";
 
-import { getEiffelTower1Scene } from "./scenes/eiffelTower1.js";
+import { getEiffelTower1Scene } from "./scenes/module3_promenade/eiffelTower1.js";
 import { getToilet3Scene } from "./scenes/module3_promenade/toilet3.js";
 
 import { getToilet4Scene } from "./scenes/module3_promenade/toilet4.js";

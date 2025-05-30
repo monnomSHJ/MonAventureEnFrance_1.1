@@ -1,5 +1,5 @@
 import { state } from "../../../script.js";
-import { getCafe1Scene } from "../cafe1.js";
+import { getCafe1Scene } from "./cafe1.js";
 import { renderQuest } from "../../../statusBar.js";
 
 export function getRestaurant5Scene() {

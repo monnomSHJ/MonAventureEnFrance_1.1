@@ -1,6 +1,6 @@
-import { state } from "../../script.js";
+import { state } from "../../../script.js";
 import { getCafe2Scene } from "./cafe2.js";
-import { renderStatusBar } from "../../statusBar.js";
+import { renderStatusBar } from "../../../statusBar.js";
 
 export function getCafe1Scene() {
 

@@ -1,5 +1,5 @@
-import { state } from "../../script.js";
-import { renderQuest } from "../../statusBar.js";
+import { state } from "../../../script.js";
+import { renderQuest } from "../../../statusBar.js";
 import { getCafe3Scene } from "./cafe3.js";
 
 export function getCafe2Scene() {
