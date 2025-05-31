@@ -32,7 +32,7 @@ export function getCityIntroLines(city) {
             { speaker: `📢`, text: `마르세유에서 맛있는 해산물 요리와 다문화 분위기를 마음껏 만끽하시길 바랍니다!`, overlayImg: `assets/images/marseilleDescriptionOverlay2.jpg` }
         ],
 
-        starsbourg: [
+        strasbourg: [
             { speaker: `📢`, text: `스트라스부르에 가기 전에, 스트라스부르가 어떤 곳인지 알아두면 좋겠죠?` },
             { speaker: `📢`, text: `스트라스부르는 프랑스 동부, 독일 국경 근처에 위치해 있습니다.`, overlayImg: `assets/images/strasbourgMap.jpg` },
             { speaker: `📢`, text: `유럽 의회 본부가 위치한 정치적 중심지인 스트라스부르는,`, overlayImg: `assets/images/strasbourgMap.jpg` },
