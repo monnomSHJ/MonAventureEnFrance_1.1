@@ -329,11 +329,7 @@ async function handleNextLine() {
             state.currentModule = null;
             saveGameState();
 
-            if (state.completedModules.size === allModules.length) {
-                loadScene(getEnd2Scene());
-            } else {
-                loadScene(getModuleSelecteScene());
-            }
+            getModuleSelecteScene()
             renderQuest(state.currentQuest);
             return;
         }

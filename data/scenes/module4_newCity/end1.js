@@ -35,7 +35,7 @@ export function getEnd1Scene() {
             saveResultToLocalStorage();
             state.currentQuest = "";
             renderQuest();
-            return getModuleSelecteScene();
+            return null;
         }
     }
 }
