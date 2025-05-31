@@ -3,7 +3,6 @@ import { loadScene, overlay } from "../../../sceneManager.js";
 import { renderStatusBar, renderQuest } from "../../../statusBar.js";
 import { allModules } from "../../modules.js";
 import { saveGameState, clearGameState } from "../../../saveLoad.js";
-import { getEnd2Scene } from "./end2.js"
 
 export function getModuleSelecteScene() {
     return {
