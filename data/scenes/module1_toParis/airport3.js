@@ -27,7 +27,7 @@ export function getAirport3Scene() {
 
     const start = { x: 10, y: 19 };
     const correctTargets = [ { x: 0, y: 4 }, { x: 0, y: 5 }];
-    const promptText = "👩‍💼 Tout d'abord, suivez le couloir à droite, puis tournez à gauche après les ascenseurs."
+    const promptText = "👩‍💼 Bien sûr ! Tout d'abord, vous devez suivre le couloir à droite et tourner à gauche après les ascenseurs."
 
     return {
         id: "airport3",
