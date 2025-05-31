@@ -39,7 +39,7 @@ function generateModuleSelectHTML() {
     const isAllModulesCompleted = state.completedModules.size === allModules.length;
 
     return `
-        <div id="module-select-screen" class="intro-screen">
+        <div id="module-select-screen" class="module-screen">
             <div class="module-information">각 모듈을 순서대로 플레이한 뒤,<br>결과 확인 버튼을 누르면 최종 결과페이지로 이동합니다.</div>
             <div class="module-cards-container">
                 ${moduleCardsHTML}
