@@ -12,10 +12,10 @@ export function getLyon2bScene() {
             { speaker: `👤 ${state.userName}`, text: `여기에 이곳에 관해 설명이 적혀있다.` },
             { speaker: ``, text: `Bienvenue à la basilique de Fourvière.`, overlayImg: "assets/images/fourviereOverlay1.png" },
             { speaker: ``, text: `Elle offre une vue magnifique sur la ville de Lyon.`, overlayImg: "assets/images/fourviereOverlay1.png" },
-            { speaker: ``, text: `alors ne manquez surtout pas la vue depuis la colline de Fourvière.`, overlayImg: "assets/images/fourviereOverlay1.png" },
+            { speaker: ``, text: `Alors ne manquez surtout pas la vue depuis la colline de Fourvière.`, overlayImg: "assets/images/fourviereOverlay1.png" },
             { speaker: ``, text: `L'entrée est gratuite pour tous les visiteurs.`, overlayImg: "assets/images/fourviereOverlay1.png" },
-            { speaker: ``, text: `Les animaux ne sont pas autorisés dans la cathédrale, et fumer non plus.`, overlayImg: "assets/images/fourviereOverlay1.png" },
-            { speaker: ``, text: `Merci de garder le silence pendant la visite.`, overlayImg: "assets/images/fourviereOverlay1.png" },
+            { speaker: ``, text: `Les animaux ne sont pas autorisés dans la cathédrale. Il est aussi interdit de fumer.`, overlayImg: "assets/images/fourviereOverlay1.png" },
+            { speaker: ``, text: `Merci de rester silencieux pendant la visite.`, overlayImg: "assets/images/fourviereOverlay1.png" },
             { speaker: `👤 ${state.userName}`, text: `푸르비에르 대성당의 멋진 모습을 눈에 잔뜩 담았다.` },
         ],
 

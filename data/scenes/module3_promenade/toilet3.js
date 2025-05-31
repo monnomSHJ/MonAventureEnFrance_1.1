@@ -1,5 +1,5 @@
 import { state } from "../../../script.js";
-import { getToilet4Scene } from "./toilet4.js";
+import { getToilet4Scene } from "../module4_newCity/toilet4.js";
 
 export function getToilet3Scene() {
 
@@ -7,11 +7,11 @@ export function getToilet3Scene() {
         id: "toilet3",
         background_img: "assets/images/parisMainStreet.jpg",
         narration: "",
-        lines: () => [
+        lines: [
             { speaker: `📢`, text: `1 유로가 차감되었습니다.`},
-            { speaker: `👤 ${state.userName}`, text: `휴... 개운하다.` },
-            { speaker: `👤 ${state.userName}`, text: `파리에서의 하루를 아주 알차게 보낸 것 같아.` },
-            { speaker: `👤 ${state.userName}`, text: `이제 숙소로 돌아가서... 내일의 계획을 정리해보자.` },
+            { speaker: () => `👤 ${state.userName}`, text: `휴... 개운하다.` },
+            { speaker: () => `👤 ${state.userName}`, text: `파리에서의 하루를 아주 알차게 보낸 것 같아.` },
+            { speaker: () => `👤 ${state.userName}`, text: `이제 숙소로 돌아가서... 내일의 계획을 정리해보자.` },
             { speaker: `📢`, text: `프랑스에서의 첫 날을 무사히 잘 보내셨군요!` },
             { speaker: `📢`, text: `그건 그렇고, 프랑스에서는 정말 공중화장실이 유료일까요?` },
             { speaker: `📢`, text: `프랑스는 공공장소에 공중화장실이 구비되어 있는 경우가 흔하지 않습니다.`, overlayImg: `assets/images/toiletsDescription1.jpeg` },
@@ -25,10 +25,13 @@ export function getToilet3Scene() {
             { speaker: `📢`, text: `만약 주변에 공중화장실이 없다면, 주변에 보이는 식당이나 카페에 들어가서 화장실 사용을 문의해보세요.`, overlayImg: `assets/images/publicToilets.jpg` },
             { speaker: `📢`, text: `약간의 금액을 지불하여, 혹시나 운이 좋다면 무료로 화장실을 사용할 수 있을 겁니다.`, overlayImg: `assets/images/publicToilets.jpg` },
             { speaker: `📢`, text: `꼭 기억해두세요...` },
+            { speaker: `📢`, text: `모듈 3 완료! 모듈 선택 화면으로 돌아갑니다.`}
         ],
         
         nextScene: () => {
-            return getToilet4Scene();
+            state.currentQuest = "";
+            renderQuest();
+            return null;
         }
     }
 }

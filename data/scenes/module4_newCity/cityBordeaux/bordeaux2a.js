@@ -13,7 +13,7 @@ export function getBordeaux2aScene() {
             { speaker: ``, text: `Bienvenue à la cathédrale Saint-André de Bordeaux.`, overlayImg: "assets/images/saintAndreOverlay1.png" },
             { speaker: ``, text: `L'entrée est gratuite.`, overlayImg: "assets/images/saintAndreOverlay1.png" },
             { speaker: ``, text: `Elle a été construite entre le XIIᵉ et le XIVᵉ siècle.`, overlayImg: "assets/images/saintAndreOverlay1.png" },
-            { speaker: ``, text: `Merci de garder le silence pendant la visite.`, overlayImg: "assets/images/saintAndreOverlay1.png" },
+            { speaker: ``, text: `Merci de rester silencieux pendant la visite.`, overlayImg: "assets/images/saintAndreOverlay1.png" },
             { speaker: `👤 ${state.userName}`, text: `생 앙드레 대성당의 웅장함을 한껏 눈에 담았다.` },
         ],
 

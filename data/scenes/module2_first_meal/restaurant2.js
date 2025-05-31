@@ -9,7 +9,7 @@ export function getRestaurant2Scene() {
         narration: "",
         lines: [
             { speaker: `👨‍🍳 Serveur`, text: "Bonjour ! Vous êtes combien ?", personImg: "assets/images/restaurantPerson1.png" },
-            { speaker: `👤 ${state.userName}`, text: "Oui, bonjour. Je suis seul.", personImg: "assets/images/restaurantPerson1.png" },
+            { speaker: `👤 ${state.userName}`, text: "Oui, bonjour. Je suis seul(e).", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👨‍🍳 Serveur`, text: "D'accord. Une table pour une personne. Suivez-moi, s'il vous plaît.", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: ``, text: "직원 분을 따라 자리를 잡았다.", personImg: "assets/images/restaurantPerson1.png" },
             { speaker: `👨‍🍳 Serveur`, text: "Voilà, le menu.", personImg: "assets/images/restaurantPerson1.png", overlayImg: "assets/images/restaurantMenu.png" },

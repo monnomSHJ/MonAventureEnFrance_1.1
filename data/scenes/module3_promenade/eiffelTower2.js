@@ -17,7 +17,7 @@ export function getEiffelTower2Scene() {
             { speaker: `👤 ???`, text: `Bien sûr !`, personImg: `assets/images/eiffelTowerPerson1.png` },
             { speaker: `👤 ???`, text: `Le musée du Louvre est l'un des plus célèbres du monde.`, personImg: `assets/images/eiffelTowerPerson1.png` },
             { speaker: `👤 ${state.userName}`, text: "Comment puis-je aller au musée du Louvre ?", personImg: `assets/images/eiffelTowerPerson1.png` },
-            { speaker: `👤 ???`, text: `Pour y aller, prenez le bus 72 à l'arrêt Pont d'Iéna.`, personImg: `assets/images/eiffelTowerPerson1.png` },
+            { speaker: `👤 ???`, text: `Pour y aller, vous devez prendre le bus 72 à l'arrêt Pond d'léna.`, personImg: `assets/images/eiffelTowerPerson1.png` },
             { speaker: `👤 ???`, text: `Descendez à l'arrêt Quai François Mitterrand.`, personImg: `assets/images/eiffelTowerPerson1.png` },
             { speaker: `👤 ???`, text: `Le musée du Louvre est à 5 minutes à pied.`, personImg: `assets/images/eiffelTowerPerson1.png` },
             { speaker: `👤 ${state.userName}`, text: "Merci beaucoup !", personImg: `assets/images/eiffelTowerPerson1.png` },

@@ -7,7 +7,7 @@ import { getCafe4Scene } from "./scenes/module2_first_meal/cafe4.js";
 import { getEiffelTower1Scene } from "./scenes/module3_promenade/eiffelTower1.js";
 import { getToilet3Scene } from "./scenes/module3_promenade/toilet3.js";
 
-import { getToilet4Scene } from "./scenes/module3_promenade/toilet4.js";
+import { getToilet4Scene } from "./scenes/module4_newCity/toilet4.js";
 import { getEnd1Scene } from "./scenes/module4_newCity/end1.js";
 
 export const allModules = [

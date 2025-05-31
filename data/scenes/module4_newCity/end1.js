@@ -33,7 +33,9 @@ export function getEnd1Scene() {
 
         nextScene: () => {
             saveResultToLocalStorage();
-            return getEnd2Scene();
+            state.currentQuest = "";
+            renderQuest();
+            return null;
         }
     }
 }

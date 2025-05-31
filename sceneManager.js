@@ -37,7 +37,7 @@ import { getLouvre3Scene } from "./data/scenes/module3_promenade/louvre3.js";
 import { getToilet1Scene } from "./data/scenes/module3_promenade/toilet1.js";
 import { getToilet2Scene } from "./data/scenes/module3_promenade/toilet2.js";
 import { getToilet3Scene } from "./data/scenes/module3_promenade/toilet3.js";
-import { getToilet4Scene } from "./data/scenes/module3_promenade/toilet4.js";
+import { getToilet4Scene } from "./data/scenes/module4_newCity/toilet4.js";
 import { getLyon1Scene } from "./data/scenes/module4_newCity/cityLyon/lyon1.js";
 import { getLyon1aScene } from "./data/scenes/module4_newCity/cityLyon/lyon1a.js";
 import { getLyon1bScene } from "./data/scenes/module4_newCity/cityLyon/lyon1b.js";

@@ -10,12 +10,12 @@ export function getMarseille2a2Scene() {
             { speaker: ``, text: "Il parle de la famille et des liens entre les gens.", overlayImg: "assets/images/unAirDeFamille.jpg" },
         ],
         "Cycles, parures, motifs": [
-            { speaker: ``, text: "Cette exposition montre des bijoux, vêtements et motifs de la culture amazighe.", overlayImg: "assets/images/cyclesParuresMotifs.jpg" },
+            { speaker: ``, text: "Cette exposition montre des bijoux, des vêtements et motifs de la culture amazighe.", overlayImg: "assets/images/cyclesParuresMotifs.jpg" },
             { speaker: ``, text: "Elle célèbre l'art et les traditions du Maghreb.", overlayImg: "assets/images/cyclesParuresMotifs.jpg" },
         ],
         "Au fort, les âmes sont": [
             { speaker: ``, text: "L'artiste Laure Prouvost crée un parcours artistique dans le fort Saint-Jean.", overlayImg: "assets/images/auFortLesAmesSont.jpg" },
-            { speaker: ``, text: "Ses œuvres parlent de mémoire, de nature et de transformation.", overlayImg: "assets/images/auFortLesAmesSont.jpg" },
+            { speaker: ``, text: "Ses œuvres parlent de la mémoire, de la nature et de la transformation.", overlayImg: "assets/images/auFortLesAmesSont.jpg" },
         ],
         "Méditerranées Épisode 1": [
             { speaker: `📢`, text: "Cette exposition explore l'histoire et les cultures de la Méditerranée.", overlayImg: "assets/images/mediterraneesEpisode1.jpg" },

@@ -15,7 +15,7 @@ export function getLyon2a2Scene() {
             { speaker: ``, text: "Voici l'armure portée dans le film Spider-Man.", overlayImg: "assets/images/spiderMan.jpg" },
         ],
         "007 제임스본드 수트": [
-            { speaker: `📢`, text: "Voici le costume porté par James Bond dans le film 007:Skyfall.", overlayImg: "assets/images/jamesBond.jpg" },
+            { speaker: `📢`, text: "Voici le costume porté par James Bond dans le film 007 : Skyfall.", overlayImg: "assets/images/jamesBond.jpg" },
         ]
     };
 
@@ -28,7 +28,7 @@ export function getLyon2a2Scene() {
         lines: [
             { speaker: `👤 ${state.userName}`, text: `박물관에 들어오니 박물관에 대한 소개 글이 적혀있다.`, overlayImg: "assets/images/miniatureOverlay1.jpg" },
             { speaker: `👤 ${state.userName}`, text: `Bienvenue au musée Cinéma et Miniature de Lyon !`, overlayImg: "assets/images/miniatureOverlay1.jpg" },
-            { speaker: `👤 ${state.userName}`, text: `Ce musée n'est pas intéressant que pour les adultes.`, overlayImg: "assets/images/miniatureOverlay1.jpg" },
+            { speaker: `👤 ${state.userName}`, text: `Ce musée est autant amusant pour les adultes que pour les enfants !`, overlayImg: "assets/images/miniatureOverlay1.jpg" },
             { speaker: `👤 ${state.userName}`, text: `Au musée, on peut voir des vêtements de films, comme des costumes et des armures.`, overlayImg: "assets/images/miniatureOverlay1.jpg" },
             { speaker: `👤 ${state.userName}`, text: `Découvrez les secrets des effets spéciaux du cinéma et admirez plus de 100 scènes miniatures incroyablement réalistes.`, overlayImg: "assets/images/miniatureOverlay1.jpg" },
             { speaker: `👤 ${state.userName}`, text: `어떤 작품을 봐볼까?` },

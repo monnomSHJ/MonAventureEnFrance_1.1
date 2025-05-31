@@ -22,16 +22,16 @@ export function getStrasbourg1acScene() {
             { speaker: ``, text: `그러면 언제 기차가 도착하는지 물어봐야겠다.`, personImg: "assets/images/garePerson2.png" },
             { speaker: ``, text: ``, personImg: "assets/images/garePerson2.png",
                     production: {
-                    prompt: "_ est-ce que le train va _ ?",
+                    prompt: "_ est-ce qu'il va _ ?",
                     meaning: "기차는 언제 도착하나요?",
                     words: ["Pourquoi", "Où", "Quand", "arriver", "aller"],
                     answer: ["Quand", "arriver"]
                 }
              },
-             { speaker: `👤 ${state.userName}`, text: `Quand est-ce que le train va arriver ?`, personImg: "assets/images/garePerson2.png" },
+             { speaker: `👤 ${state.userName}`, text: `Quand est-ce qu'il va arriver ?`, personImg: "assets/images/garePerson2.png" },
              { speaker: `📢`, text: "문장 만들기 성공! 5점을 획득하였습니다.", personImg: "assets/images/garePerson2.png" },
              { speaker: `👤 Agent en gare`, text: `Il arrive dans 10 minutes.`, personImg: "assets/images/garePerson2.png" },
-             { speaker: `👤 Agent en gare`, text: `Je suis très désolé pour le retard du train.`, personImg: "assets/images/garePerson2.png" },
+             { speaker: `👤 Agent en gare`, text: `Nous sommes vraiment désolés pour le retard.`, personImg: "assets/images/garePerson2.png" },
              { speaker: ``, text: `뭐라고 답할까?`, personImg: "assets/images/garePerson2.png" },
              { speaker: ``, text: ``, personImg: "assets/images/garePerson2.png",
                 choices: {

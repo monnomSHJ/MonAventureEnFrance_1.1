@@ -12,9 +12,9 @@ export function getLyon1adScene() {
         lines: [
             { speaker: `👤 ${state.userName}`, text: `예매한 자리에 앉았다.` },
             { speaker: `🚈 Conducteur de train`, text: `Nous vous remercions de votre patience et de votre compréhension.` },
-            { speaker: `🚈 Conducteur de train`, text: `Le train part dans une minute.` },
-            { speaker: `🚈 Conducteur de train`, text: `Avant de partir, n'oubliez jamais de mettre votre ceinture.` },
-            { speaker: `🚈 Conducteur de train`, text: `Il ne faut fumer ni cigarette ni vapoteuse dans tout le train.` },
+            { speaker: `🚈 Conducteur de train`, text: `Le train partira dans une minute.` },
+            { speaker: `🚈 Conducteur de train`, text: `Avant de le départ, n'oubliez surtout pas d'attacher votre ceinture de sécurité.` },
+            { speaker: `🚈 Conducteur de train`, text: `Il est interdit de fumer ou de vapoter dans tout le train.` },
             { speaker: `📢`, text: "짜잔~ 깜짝 퀴즈!" },
             { speaker: ``, text: "",
                 choices: {

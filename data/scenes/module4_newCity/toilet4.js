@@ -1,8 +1,8 @@
 import { state } from "../../../script.js";
-import { getLyon1Scene } from "../module4_newCity/cityLyon/lyon1.js";
-import { getMarseille1Scene } from "../module4_newCity/cityMarseille/marseille1.js";
-import { getStrasbourg1Scene } from "../module4_newCity/cityStrasbourg/strasbourg1.js";
-import { getBordeaux1Scene } from "../module4_newCity/cityBordeaux/bordeaux1.js";
+import { getLyon1Scene } from "./cityLyon/lyon1.js";
+import { getMarseille1Scene } from "./cityMarseille/marseille1.js";
+import { getStrasbourg1Scene } from "./cityStrasbourg/strasbourg1.js";
+import { getBordeaux1Scene } from "./cityBordeaux/bordeaux1.js";
 
 let selectedScene = null;
 

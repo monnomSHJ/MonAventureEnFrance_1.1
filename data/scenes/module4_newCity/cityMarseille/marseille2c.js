@@ -13,7 +13,7 @@ export function getMarseille2cScene() {
             { speaker: ``, text: `Bienvenue au Vieux-Port de Marseille.`, overlayImg: "assets/images/leVieuxPortOverlay1.png" },
             { speaker: ``, text: `C'est un lieu historique.`, overlayImg: "assets/images/leVieuxPortOverlay1.png" },
             { speaker: ``, text: `Merci de respecter les bateaux et les pêcheurs.`, overlayImg: "assets/images/leVieuxPortOverlay1.png" },
-            { speaker: ``, text: `Vous pouvez voir les marchés, les cafés et les bateaux.`, overlayImg: "assets/images/leVieuxPortOverlay1.png" },
+            { speaker: ``, text: `Vous pouvez voir des marchés, des cafés et des bateaux.`, overlayImg: "assets/images/leVieuxPortOverlay1.png" },
             { speaker: `👤 ${state.userName}`, text: `항구의 아름다움을 만끽했다.` },
         ],
 
