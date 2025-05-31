@@ -2,7 +2,7 @@ import { state } from "../../../../script.js";
 import { getMarseille2aScene } from "./marseille2a.js";
 import { getMarseille2bScene } from "./marseille2b.js";
 import { getMarseille2cScene } from "./marseille2c.js";
-import { getEnd1Scene } from "../end1.js";
+import { getEnd1Scene } from "../../common/end1.js";
 import { createCityExploreSceneFunctions } from "../../../sceneHelpers.js";
 
 export function getMarseille2Scene() {

@@ -81,6 +81,11 @@ function setupModuleSelectEvents() {
             saveGameState();
 
             state.currentModule = moduleId;
+
+            if (moduleId === "module3_promenade") {
+                state.currentQuest = "에펠탑";
+            }
+            
             renderQuest();
 
             loadScene(module.startScene());

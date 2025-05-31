@@ -117,8 +117,6 @@ export function getEiffelTower1Scene() {
         ],
 
         nextScene: () => {
-            state.currentQuest = "",
-            renderQuest();
             return getEiffelTower2Scene();
         }
 

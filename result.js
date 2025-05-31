@@ -1,12 +1,33 @@
 import { getSceneSummaries } from './sceneSummary.js';
 
 window.addEventListener("DOMContentLoaded", () => {
+    let loadedState = {};
+    try {
+        const savedState = localStorage.getItem('gameState');
+        if (savedState) {
+            loadedState = JSON.parse(savedState);
+
+            if (loadedState.viewedArtworks) loadedState.viewedArtworks = new Set(loadedState.viewedArtworks);
+            if (loadedState.visitedLyonSpots) loadedState.visitedLyonSpots = new Set(loadedState.visitedLyonSpots);
+            if (loadedState.viewedLyonArtworks) loadedState.viewedLyonArtworks = new Set(loadedState.viewedLyonArtworks);
+            if (loadedState.viewedMarseilleArtworks) loadedState.viewedMarseilleArtworks = new Set(loadedState.viewedMarseilleArtworks);
+            if (loadedState.viewedStrasbourgArtworks) loadedState.viewedStrasbourgArtworks = new Set(loadedState.viewedStrasbourgArtworks);
+            if (loadedState.viewedBordeauxArtworks) loadedState.viewedBordeauxArtworks = new Set(loadedState.viewedBordeauxArtworks);
+            if (loadedState.completedModules) loadedState.completedModules = new Set(loadedState.completedModules);
+
+            console.log("Result page: Loaded state from localStorage", loadedState);
+        } else {
+            console.warn("Result page: No saved game state found in localStorage.");
+        }
+    } catch (e) {
+        console.error("Result page: Failed to parse gameState from localStorage", e);
+    }
 
     const userName = localStorage.getItem("userName") || "-";
     const balance = localStorage.getItem("balance") || "0";
     const score = localStorage.getItem("score") || "0";
 
-    const vocabList = JSON.parse(localStorage.getItem("savedVocabList") || "[]");
+    const vocabList = loadedState.savedVocabList || [];
 
     const finalScore = parseInt(score) + Math.floor(parseInt(balance) / 2);
 
@@ -22,8 +43,13 @@ window.addEventListener("DOMContentLoaded", () => {
         vocabContainer.appendChild(li);
     });
 
+
+
+    const originalState = window.state;
+
     const sceneContainer = document.getElementById("scenes");
     const sceneSummaries = getSceneSummaries();
+
     sceneSummaries.forEach(scene => {
         const sceneElement = document.createElement("div");
         sceneElement.classList.add("scene")
@@ -73,4 +99,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         sceneContainer.appendChild(sceneElement);
     });
+
+    window.state = originalState;
 });

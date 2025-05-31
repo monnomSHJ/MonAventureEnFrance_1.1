@@ -58,7 +58,7 @@ import { getLyon2Scene } from "./data/scenes/module4_newCity/cityLyon/lyon2.js";
 import { getMarseille2Scene } from "./data/scenes/module4_newCity/cityMarseille/marseille2.js";
 import { getStrasbourg2Scene } from "./data/scenes/module4_newCity/cityStrasbourg/strasbourg2.js";
 import { getBordeaux2Scene } from "./data/scenes/module4_newCity/cityBordeaux/bordeaux2.js";
-import { getEnd1Scene } from "./data/scenes/module4_newCity/end1.js";
+import { getEnd1Scene } from "./data/scenes/common/end1.js";
 import { getEnd2Scene } from "./data/scenes/common/end2.js";
 import { getCharacterSelectScene } from "./data/scenes/common/characterSelect.js";
 import { getModuleSelecteScene } from "./data/scenes/common/moduleSelect.js";
@@ -285,6 +285,11 @@ export function setupDialogueClick() {
     });
 
     window.addEventListener("keydown", async (e) => {
+        const dictionaryPanel = document.querySelector('.dictionary-panel');
+        if (dictionaryPanel && dictionaryPanel.classList.contains('open')) {
+            return; // 단어장 패널이 열려 있으면 스페이스바 동작을 막음
+        }
+
         if (e.code === "Space") {
             const dialogueBox = document.getElementById("dialogue-box");
 

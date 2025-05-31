@@ -1,5 +1,5 @@
 import { saveResultToLocalStorage } from "../../../saveResult.js";
-import { getEnd2Scene } from "../common/end2.js";
+import { getEnd2Scene } from "./end2.js";
 
 export function getEnd1Scene() {
 
