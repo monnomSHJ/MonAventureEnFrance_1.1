@@ -113,7 +113,7 @@ export function createTransportQuizOptions(transportType) {
                 { speaker: `📢`, text: `아쉽네요! ${transportType}는 1분 뒤에 출발합니다. 1점이 차감되었습니다.` },
                 { speaker: `📢`, text: `정답은 "전자담배 흡연은 가능하다"였습니다.` },
                 { speaker: `📢`, text: `${transportType} 내에서는 일반 담배와 전자담배 모두 흡연이 불가합니다.` },
-                { speaker: `📢`, text: `"Il ne faut fumer ni cigarette ni vapoteuse dans tout le ${verb}."` },
+                { speaker: `📢`, text: `"Il est interdit de fumer ou de vapoter dans tout le ${verb}."` },
             ],
         },
         {
@@ -121,7 +121,7 @@ export function createTransportQuizOptions(transportType) {
             scoreDelta: 3,
             insertLines: [
                 { speaker: `📢`, text: `정답입니다! ${transportType} 내에서는 일반 담배와 전자담배 모두 흡연이 불가합니다. 3점이 추가되었습니다.` },
-                { speaker: `📢`, text: `"Il ne faut fumer ni cigarette ni vapoteuse dans tout le ${verb}."` },
+                { speaker: `📢`, text: `"Il est interdit de fumer ou de vapoter dans tout le ${verb}."` },
             ],
         },
         {
@@ -131,7 +131,7 @@ export function createTransportQuizOptions(transportType) {
                 { speaker: `📢`, text: `아쉽네요! ${transportType}는 1분 뒤에 출발합니다. 1점이 차감되었습니다.` },
                 { speaker: `📢`, text: `정답은 "전자담배 흡연은 가능하다"였습니다.` },
                 { speaker: `📢`, text: `${transportType} 내에서는 일반 담배와 전자담배 모두 흡연이 불가합니다.` },
-                { speaker: `📢`, text: `"Il ne faut fumer ni cigarette ni vapoteuse dans tout le ${verb}."` },
+                { speaker: `📢`, text: `Il est interdit de fumer ou de vapoter dans tout le ${verb}."` },
             ],
         },
     ];

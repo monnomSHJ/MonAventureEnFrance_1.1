@@ -20,7 +20,7 @@ export function getMarseille2aScene() {
         });
 
         return [
-            wrongAnswer("10` 유로"),
+            wrongAnswer("10 유로"),
             {
                 label: "11 유로",
                 scoreDelta: 1,

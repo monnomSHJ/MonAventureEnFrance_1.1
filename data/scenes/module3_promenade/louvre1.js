@@ -43,11 +43,11 @@ export function getLouvre1Scene() {
                             }
                         },
                         {
-                            label: "Le tarif réduit pour étudiant (12 €)",
+                            label: "Le tarif étudiant (12 €)",
                             scoreDelta: 3,
                             insertLines: [
                                 { speaker: `👤 ${state.userName}`, text: "Je voudrais prendre un billet étudiant.", personImg: "assets/images/louvrePerson1.png" },
-                                { speaker: `👩‍💼 Guichetière`, text: "D'accord ! D'accord. Vous avez une carte d'étudiant ?", personImg: "assets/images/louvrePerson1.png" },
+                                { speaker: `👩‍💼 Guichetière`, text: "D'accord ! Vous avez une carte d'étudiant ?", personImg: "assets/images/louvrePerson1.png" },
                                 { speaker: `👤 ${state.userName}`, text: "Oui, bien sûr. La voici.", personImg: "assets/images/louvrePerson1.png" },
                                 { speaker: `👩‍💼 Guichetière`, text: "Parfait. Cela fait 12 euros.", personImg: "assets/images/louvrePerson1.png" },
                                 { speaker: `👤 ${state.userName}`, text: "Oui, je paie en espèces.", personImg: "assets/images/louvrePerson1.png" },
