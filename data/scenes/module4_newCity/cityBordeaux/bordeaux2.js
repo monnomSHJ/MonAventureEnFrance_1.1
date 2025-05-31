@@ -2,7 +2,7 @@ import { state } from "../../../../script.js";
 import { getBordeaux2aScene } from "./bordeaux2a.js";
 import { getBordeaux2bScene } from "./bordeaux2b.js";
 import { getBordeaux2cScene } from "./bordeaux2c.js";
-import { getEnd1Scene } from "../../common/end1.js";
+import { getEnd1Scene } from "../end1.js";
 import { createCityExploreSceneFunctions } from "../../../sceneHelpers.js";
 
 export function getBordeaux2Scene() {

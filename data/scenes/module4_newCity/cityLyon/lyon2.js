@@ -2,7 +2,7 @@ import { state } from "../../../../script.js";
 import { getLyon2aScene } from "./lyon2a.js";
 import { getLyon2bScene } from "./lyon2b.js";
 import { getLyon2cScene } from "./lyon2c.js";
-import { getEnd1Scene } from "../../common/end1.js";
+import { getEnd1Scene } from "../end1.js";
 import { createCityExploreSceneFunctions } from "../../../sceneHelpers.js";
 
 export function getLyon2Scene() {

@@ -1,5 +1,5 @@
 import { saveResultToLocalStorage } from "../../../saveResult.js";
-import { getEnd2Scene } from "./end2.js";
+import { getModuleSelecteScene } from "../common/moduleSelect.js";
 
 export function getEnd1Scene() {
 
@@ -28,14 +28,14 @@ export function getEnd1Scene() {
             },
             { speaker: "📢", text: "하하하! 감사합니다. 뿌듯하네요."},
             { speaker: "📢", text: "이 게임이 여러분에게 좋은 학습 경험이 되었다면 좋겠습니다."},
-            { speaker: "📢", text: "참, 게임 결과도 한번 살펴볼까요?"} ,
+            { speaker: "📢", text: "모듈 선택 화면으로 돌아가 '결과 확인' 버튼을 눌러 최종 결과를 확인해보세요!"} ,
         ],
 
         nextScene: () => {
             saveResultToLocalStorage();
             state.currentQuest = "";
             renderQuest();
-            return null;
+            return getModuleSelecteScene();
         }
     }
 }

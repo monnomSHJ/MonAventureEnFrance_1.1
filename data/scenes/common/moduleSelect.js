@@ -85,7 +85,7 @@ function setupModuleSelectEvents() {
             if (moduleId === "module3_promenade") {
                 state.currentQuest = "에펠탑";
             }
-            
+
             renderQuest();
 
             loadScene(module.startScene());
@@ -95,8 +95,6 @@ function setupModuleSelectEvents() {
     finishGameBtn.addEventListener('click', () => {
         if (state.completedModules.size === allModules.length) {
             loadScene(getEnd2Scene());
-            saveGameState();
-            clearGameState();
         } else {
             showAlertPopup("알림", "모든 모듈을 완료해야 결과 확인이 가능합니다.");
         }

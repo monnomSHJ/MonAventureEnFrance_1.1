@@ -2,7 +2,7 @@ import { state } from "../../../../script.js";
 import { getStrasbourg2aScene } from "./strasbourg2a.js";
 import { getStrasbourg2bScene } from "./strasbourg2b.js";
 import { getStrasbourg2cScene } from "./strasbourg2c.js";
-import { getEnd1Scene } from "../../common/end1.js";
+import { getEnd1Scene } from "../end1.js";
 import { createCityExploreSceneFunctions } from "../../../sceneHelpers.js";
 
 export function getStrasbourg2Scene() {
