@@ -174,7 +174,7 @@ function setDebugState(completedModuleIds = [], customState = {}) {
 
 function setAllModulesCompleted() {
   const allModuleIds = allModules.map(m => m.id);
-  setDebugState(["module1_toParis", "module2_first_meal", "module3_promenade"], {
+  setDebugState(["module1_toParis", "module2_first_meal", "module3_promenade", "module4_newCity"], {
     userName: "FinalTester",
     balance: 800,
     score: 150,

@@ -94,7 +94,8 @@ function setupModuleSelectEvents() {
 
     finishGameBtn.addEventListener('click', () => {
         if (state.completedModules.size === allModules.length) {
-            loadScene(getEnd2Scene());
+            saveGameState();
+            window.open("result.html", "_blank");
         } else {
             showAlertPopup("알림", "모든 모듈을 완료해야 결과 확인이 가능합니다.");
         }
