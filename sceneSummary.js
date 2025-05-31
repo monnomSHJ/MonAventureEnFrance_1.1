@@ -1,8 +1,13 @@
 import hotelData from "./data/hotelData.js";
-import { state } from "./script.js";
 
-export function getSceneSummaries() {
-    const hotel = hotelData.find(h => h.id === state.selectedHotelId);
+export function getSceneSummaries(currentState) {
+    const selectedHotelId = currentState.selectedHotelId || '';
+    const currentSelectedDish = currentState.selectedDish || { name: "정보 없음", image: "" };
+    const currentSelectedCafe = currentState.selectedCafe || { name: "정보 없음", image: "" };
+    const selectedCity = currentState.selectedCity || "null";
+    const selectedTransport = currentState.selectedTransport || "null";
+
+    const hotel = hotelData.find(h => h.id === selectedHotelId);
 
     const summaries = [
         {
@@ -35,17 +40,17 @@ export function getSceneSummaries() {
         },
         {
             sceneTitle: "🍴 파리에서의 첫 끼",
-            description: `숙소 프론트 직원 분께 식당을 추천 받아 파리에서의 첫 끼를 즐겼다. 내가 주문한 것은 ${state.selectedDish.name}이다. 최고로 맛있는 한 끼였다!`,
+            description: `숙소 프론트 직원 분께 식당을 추천 받아 파리에서의 첫 끼를 즐겼다. 내가 주문한 것은 ${currentSelectedDish.name}이다. 최고로 맛있는 한 끼였다!`,
             dialogues: ["Connaissez-vous un bon restaurant près d'ici ?", "Vous êtes combien ?", "Alors, qu'est-ce que vous voulez ?", "J'ai envie de manger ...", "L'addition, s'il vous plaît."],
             goals: ["갈 만한 곳 추천 받기", "길 찾기 표현 이해하고 목적지 찾아가기", "음식 주문하고 결제하기", "프랑스의 식당 예절 이해하기"],
-            sceneImage: `${state.selectedDish.image}`
+            sceneImage: currentSelectedDish.image
         },
         {
             sceneTitle: "☕ 커피 한 잔의 여유",
-            description: `웨이터의 추천으로 식당 주변에 있는 Cafe de Flore에 방문했다. 역사적으로 유명한 인물들이 자주 드나들었던 곳이다. 카페에서 주문한 ${state.selectedCafe.name}은 정말이지 최고였다.`,
+            description: `웨이터의 추천으로 식당 주변에 있는 Cafe de Flore에 방문했다. 역사적으로 유명한 인물들이 자주 드나들었던 곳이다. 카페에서 주문한 ${currentSelectedCafe.name}은 정말이지 최고였다.`,
             dialogues: ["Je voudrais ...", "sur place ou à emporter ?"],
             goals: ["역사적 인물에 대한 소개 이해하기", "음식 주문하고 결제하기"],
-            sceneImage: `${state.selectedCafe.image}`
+            sceneImage: currentSelectedCafe.image
         },
         {
             sceneTitle: "⚠️ 가방 분실",
@@ -175,8 +180,8 @@ export function getSceneSummaries() {
         },
     };
 
-    const city = state.selectedCity;
-    const transport = state.selectedTransport;
+    const city = selectedCity;
+    const transport = selectedTransport;
     const extra = cityScenes[city]?.[transport];
 
     if (extra) {
