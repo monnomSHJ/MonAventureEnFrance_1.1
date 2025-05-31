@@ -18,7 +18,7 @@ export const allModules = [
         startScene: getIntro2Scene,
         endScene: getHotel5Scene
     },
-    {
+    {   
         id: "module2_first_meal",
         name: "CHAPTER 02: 파리에서의 첫 끼",
         description: "파리에서 첫 식사를 하고 카페에 방문합시다.<br>돌발 상황에 대처하는 방법을 익힙니다.",
