@@ -15,8 +15,8 @@ export function getEiffelTower1Scene() {
         ],
         lines: [
             { speaker: () => `👤 ${state.userName}`, text: `버스를 타고 에펠탑 앞에 도착했다.` },
-            { speaker: () => () => `👤 ${state.userName}`, text: `사진으로 보던 것보다 훨씬 큰 것 같다.` },
-            { speaker: () => () => `👤 ${state.userName}`, text: `사진으로 남겨둬야지. 찰칵찰칵.` },
+            { speaker: () => `👤 ${state.userName}`, text: `사진으로 보던 것보다 훨씬 큰 것 같다.` },
+            { speaker: () => `👤 ${state.userName}`, text: `사진으로 남겨둬야지. 찰칵찰칵.` },
             { speaker: `👤 ???`, text: `Bonjour ! Il ne fait pas beau aujourd'hui ?`, personImg: `assets/images/eiffelTowerPerson1.png` },
             { speaker: ``, text: ``, personImg: `assets/images/eiffelTowerPerson1.png`,
                 choices: {

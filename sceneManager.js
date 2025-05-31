@@ -265,7 +265,7 @@ export async function updateDialogue() {
   
         if (currentIndex < text.length) {
             textEl.innerHTML += text[currentIndex++];
-            setTimeout(typeChar, 30);
+            setTimeout(typeChar, 15);
         } else {
             isTyping = false;
         }
