@@ -12,12 +12,12 @@ export function getHotel1Scene() {
         lines: [
             { speaker: `👤 ${state.userName}`, text: `호텔 로비에 도착했다.` },
             { speaker: `👤 ${state.userName}`, text: `프론트에 가서 체크인을 해야겠지? 프론트로 가보자.` },
-            { speaker: `👮 Réceptionniste`, text: `Bonjour ! Avez-vous une réservation ?`, personImg: "assets/images/hotelPerson1.png" },
+            { speaker: `👮 Réceptionniste`, text: `Bonjour ! Avez-vous une réservation ?`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak1.wav" },
             { speaker: `👤 ${state.userName}`, text: `Oui. Je m'appelle ${state.userName}.`,personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Merci. Je vais vérifier... Puis-je avoir votre passeport, s'il vous plaît ?`, personImg: "assets/images/hotelPerson1.png"},
+            { speaker: `👮 Réceptionniste`, text: `Merci. Je vais vérifier... Puis-je avoir votre passeport, s'il vous plaît ?`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak2.wav"},
             { speaker: `👤 ${state.userName}`, text: `Oui, voici mon passeport.`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: ``, text: `호텔 직원에게 여권을 건넸다.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Très bien. Il y a un dépot de garantie de 50 euros. Il vous sera retourné au moment du départ.`, personImg: "assets/images/hotelPerson1.png"},
+            { speaker: `👮 Réceptionniste`, text: `Très bien. Il y a un dépot de garantie de 50 euros. Il vous sera retourné au moment du départ.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak3.wav"},
             { speaker: `👤 ${state.userName}`, text: `D'accord. Pas de problème.`, personImg: "assets/images/hotelPerson1.png" },
         ],
         

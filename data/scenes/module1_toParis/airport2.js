@@ -13,7 +13,7 @@ export function getAirport2Scene() {
         ],
         lines: [
             { speaker: `👤 ${state.userName}`, text: "Bonjour ! Excusez-moi."},
-            { speaker: `👩‍💼 Employée`, text: "Oui, bonjour ! En quoi puis-je vous aider ?", personImg: "assets/images/airportPerson1.png"},
+            { speaker: `👩‍💼 Employée`, text: "Oui, bonjour ! En quoi puis-je vous aider ?", personImg: "assets/images/airportPerson1.png", sound: "assets/sounds/module1/airportSpeak1.wav" },
             { speaker: `👩‍💼 Employée`, text: "프랑스어로 택시 승강장 위치를 물어보려면 어떻게 해야 하지?", personImg: "assets/images/airportPerson1.png"},
             { speaker: ``, text: "", personImg: "assets/images/airportPerson1.png",
                 production: {
@@ -25,9 +25,9 @@ export function getAirport2Scene() {
             },
             { speaker: `📢`, text: "문장 만들기 성공! 5점을 획득하였습니다.", personImg: "assets/images/airportPerson1.png"},
             { speaker: `👤 ${state.userName}`, text: "Où est la station de taxi, s'il vous plaît ?", personImg: "assets/images/airportPerson1.png"},
-            { speaker: `👩‍💼 Employée`, text: "Bien sûr ! Tout d'abord, vous devez suivre le couloir à droite et tourner à gauche après les ascenseurs.", personImg: "assets/images/airportPerson1.png"},
+            { speaker: `👩‍💼 Employée`, text: "Bien sûr ! Tout d'abord, vous devez suivre le couloir à droite et tourner à gauche après les ascenseurs.", personImg: "assets/images/airportPerson1.png", sound: "assets/sounds/module1/airportSpeak2.wav"},
             { speaker: `👤 ${state.userName}`, text: "Merci beaucoup !", personImg: "assets/images/airportPerson1.png"},
-            { speaker: `👩‍💼 Employée`, text: "Avec plaisir. Bonne journée !", personImg: "assets/images/airportPerson1.png"}
+            { speaker: `👩‍💼 Employée`, text: "Avec plaisir. Bonne journée !", personImg: "assets/images/airportPerson1.png", sound: "assets/sounds/module1/airportSpeak3.wav"}
             
         ],
 

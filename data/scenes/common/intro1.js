@@ -1,6 +1,6 @@
 import { state } from "../../../script.js";
 import { loadScene, overlay } from "../../../sceneManager.js";
-import { renderStatusBar } from "../../../statusBar.js";
+import { renderStatusBar, renderQuest } from "../../../statusBar.js";
 import { loadGameState, saveGameState } from "../../../saveLoad.js";
 import { getCharacterSelectScene } from "./characterSelect.js";
 import { getModuleSelecteScene } from "./moduleSelect.js";
@@ -80,6 +80,7 @@ export function setupIntroEvents() {
 
         localStorage.removeItem('gameState');
         renderStatusBar();
+        renderQuest();
         loadScene(getCharacterSelectScene());
       };
 

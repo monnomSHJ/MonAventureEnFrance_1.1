@@ -10,12 +10,12 @@ export function getHotel2Scene() {
         retryLines: [],
         lines: [
             { speaker: ``, text: `보증금 50유로를 지불했다.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Vous êtes dans la chambre 305, au troisième étage.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Le petit déjeuner est servi jusqu'à 9 heures`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `et le départ doit se faire avant 11 heures.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Le restaurant est au deuxième étage et il y a un salon au cinquième étage.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Et n'oubliez pas : pas de bruit après 22 heures.`, personImg: "assets/images/hotelPerson1.png" },
-            { speaker: `👮 Réceptionniste`, text: `Vous voulez que je vous explique encore une fois ?`, personImg: "assets/images/hotelPerson1.png" },
+            { speaker: `👮 Réceptionniste`, text: `Vous êtes dans la chambre 305, au troisième étage.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak4.wav" },
+            { speaker: `👮 Réceptionniste`, text: `Le petit déjeuner est servi jusqu'à 9 heures`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak5.wav" },
+            { speaker: `👮 Réceptionniste`, text: `et le départ doit se faire avant 11 heures.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak6.wav" },
+            { speaker: `👮 Réceptionniste`, text: `Le restaurant est au deuxième étage et il y a un salon au cinquième étage.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak7.wav" },
+            { speaker: `👮 Réceptionniste`, text: `Et n'oubliez pas : pas de bruit après 22 heures.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak8.wav" },
+            { speaker: `👮 Réceptionniste`, text: `Vous voulez que je vous explique encore une fois ?`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak9.wav" },
             { speaker: ``, text: `한 번 더 설명해달라고 부탁할까?`, personImg: "assets/images/hotelPerson1.png" },
             { speaker: ``, text: ``, personImg: "assets/images/hotelPerson1.png",
                 choices: {
@@ -32,11 +32,11 @@ export function getHotel2Scene() {
                             label: "예",
                             insertLines: [
                                 { speaker: `👤 ${state.userName}`, text: `Oui, encore une fois, s'il vous plaît.`, personImg: "assets/images/hotelPerson1.png" },
-                                { speaker: `👮 Réceptionniste`, text: `Vous êtes dans la chambre 305, au troisième étage.`, personImg: "assets/images/hotelPerson1.png" },
-                                { speaker: `👮 Réceptionniste`, text: `Le petit déjeuner est servi jusqu'à 9 heures,`, personImg: "assets/images/hotelPerson1.png" },
-                                { speaker: `👮 Réceptionniste`, text: `et le départ doit se fait avant 11 heures.`, personImg: "assets/images/hotelPerson1.png" },
-                                { speaker: `👮 Réceptionniste`, text: `Le restaurant est au deuxième étage, et il y a un salon au cinquième étage.`, personImg: "assets/images/hotelPerson1.png" },
-                                { speaker: `👮 Réceptionniste`, text: `Et n'oubliez pas : pas de bruit après 22 heueres.`, personImg: "assets/images/hotelPerson1.png" },
+                                { speaker: `👮 Réceptionniste`, text: `Vous êtes dans la chambre 305, au troisième étage.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak4.wav" },
+                                { speaker: `👮 Réceptionniste`, text: `Le petit déjeuner est servi jusqu'à 9 heures`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak5.wav" },
+                                { speaker: `👮 Réceptionniste`, text: `et le départ doit se faire avant 11 heures.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak6.wav" },
+                                { speaker: `👮 Réceptionniste`, text: `Le restaurant est au deuxième étage et il y a un salon au cinquième étage.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak7.wav" },
+                                { speaker: `👮 Réceptionniste`, text: `Et n'oubliez pas : pas de bruit après 22 heures.`, personImg: "assets/images/hotelPerson1.png", sound: "assets/sounds/module1/hotelSpeak8.wav" },
                                 { speaker: `👤 ${state.userName}`, text: `Merci beaucoup !`, personImg: "assets/images/hotelPerson1.png" },
                             ]
                         }
