@@ -59,7 +59,6 @@ import { getMarseille2Scene } from "./data/scenes/module4_newCity/cityMarseille/
 import { getStrasbourg2Scene } from "./data/scenes/module4_newCity/cityStrasbourg/strasbourg2.js";
 import { getBordeaux2Scene } from "./data/scenes/module4_newCity/cityBordeaux/bordeaux2.js";
 import { getEnd1Scene } from "./data/scenes/module4_newCity/end1.js";
-import { getEnd2Scene } from "./data/scenes/common/end2.js";
 import { getCharacterSelectScene } from "./data/scenes/common/characterSelect.js";
 import { getModuleSelecteScene } from "./data/scenes/common/moduleSelect.js";
 
@@ -400,7 +399,6 @@ export function setupDebugMenu() {
         strasbourg2: () => loadScene(getStrasbourg2Scene()),
         bordeaux2: () => loadScene(getBordeaux2Scene()),
         end1: () => loadScene(getEnd1Scene()),
-        end2: () => loadScene(getEnd2Scene()),
         characterSelect: () => loadScene(getModuleSelectScene()),
         moduleSelect: () => loadScene(getModuleSelectScene())
         };
