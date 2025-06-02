@@ -23,7 +23,7 @@ export function getToilet1Scene() {
                                 { speaker: `👤 ${state.userName}`, text: `Bonjour, monsieur. Je voudrais savoir...` },
                                 { speaker: `👨 Monsieur`, text: `Oui ?`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak1.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `Où est les toilettes, s'il vous plaît ?`, personImg: `assets/images/streetPersonMale.png` },
-                                { speaker: `👨 Monsieur`, text: `les toilettes ?`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak2.wav` },
+                                { speaker: `👨 Monsieur`, text: `Les toilettes ?`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak2.wav` },
                                 { speaker: `👨 Monsieur`, text: `Vous passez devant ce bâtiment là-bas, puis vous continuez tout droit.`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak3.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `Merci beaucoup !`, personImg: `assets/images/streetPersonMale.png` },
                                 { speaker: `👨 Monsieur`, text: `Avec plaisir !`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak4.wav` },

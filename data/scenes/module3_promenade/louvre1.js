@@ -65,7 +65,7 @@ export function getLouvre1Scene() {
                                 { speaker: `👤 ${state.userName}`, text: "J'ai moins de 26 ans. Est-ce que je peux entrer gratuitement ?", personImg: "assets/images/louvrePerson1.png" },
                                 { speaker: `👩‍💼 Guichetière`, text: "Êtes-vous citoyen de l'Union européenne ?", personImg: "assets/images/louvrePerson1.png", sound: "assets/sounds/module3/louvreSpeak8(3-1).wav" },
                                 { speaker: `👤 ${state.userName}`, text: "Non, je viens de Corée du Sud.", personImg: "assets/images/louvrePerson1.png" },
-                                { speaker: `👩‍💼 Guichetière`, text: "Désolée, l'entrée gratuite est réservée seulement aux citoyens de l'UE de moins de 26 ans.", personImg: "assets/images/louvrePerson1.png", sound: "assets/sounds/module3/louvreSpeak8(3-2).wav" },
+                                { speaker: `👩‍💼 Guichetière`, text: "Désolée, l'entrée gratuite est réservée aux citoyens de l'UE de moins de 26 ans.", personImg: "assets/images/louvrePerson1.png", sound: "assets/sounds/module3/louvreSpeak8(3-2).wav" },
                                 { speaker: `👩‍💼 Guichetière`, text: "Le plein tarif est de 17 euros.", personImg: "assets/images/louvrePerson1.png", sound: "assets/sounds/module3/louvreSpeak8(3-3).wav" },
                                 { speaker: `👤 ${state.userName}`, text: "D'accord, je vais prendre ce billet.", personImg: "assets/images/louvrePerson1.png" },
                                 { speaker: `📢`, text: "표를 구매했습니다. 17 유로가 차감되었습니다.", personImg: "assets/images/louvrePerson1.png" },
