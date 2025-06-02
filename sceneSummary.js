@@ -41,7 +41,7 @@ export function getSceneSummaries(currentState) {
         {
             sceneTitle: "🍴 파리에서의 첫 끼",
             description: `숙소 프론트 직원 분께 식당을 추천 받아 파리에서의 첫 끼를 즐겼다. 내가 주문한 것은 ${currentSelectedDish.name}이다. 최고로 맛있는 한 끼였다!`,
-            dialogues: ["Connaissez-vous un bon restaurant près d'ici ?", "Vous êtes combien ?", "Alors, qu'est-ce que vous voulez ?", "J'ai envie de manger ...", "L'addition, s'il vous plaît."],
+            dialogues: ["Connaissez-vous un bon restaurant près d'ici ?", "Vous êtes combien ?", "Alors ? Que souhaitez-vous commander ?", "Je vais prendre ...", "L'addition, s'il vous plaît."],
             goals: ["갈 만한 곳 추천 받기", "길 찾기 표현 이해하고 목적지 찾아가기", "음식 주문하고 결제하기", "프랑스의 식당 예절 이해하기"],
             sceneImage: currentSelectedDish.image
         },
@@ -55,7 +55,7 @@ export function getSceneSummaries(currentState) {
         {
             sceneTitle: "⚠️ 가방 분실",
             description: `카페에서의 여유를 즐기고 있었는데... 내 가방이 사라진 걸 뒤늦게 알아채고 말았다. 이럴 수가... 황급히 식당으로 돌아가보았지만 가방은 이미 사라진 뒤였다. 앞으로는 더 조심해야지.`,
-            dialogues: ["J'ai mangé ici il y a 30 minutes.", "Je pense que j'ai oublié quelque chose ici.", "Est-ce que vous l'avez vu ?", "Peut-être que quelqu'un l'a pris."],
+            dialogues: ["J'ai mangé ici il y a 30 minutes.", "Je pense avoir oublié quelques chose ici.", "Est-ce que vous l'avez vu ?", "Peut-être que quelqu'un l'a pris."],
             goals: ["돌발 상황에 침착하게 대처하기"],
             sceneImage: `assets/images/restaurantMainBg.png`
         },
@@ -69,7 +69,7 @@ export function getSceneSummaries(currentState) {
         {
             sceneTitle: "🖼️ 루브르 박물관 관람",
             description: `티켓을 구매하여 루브르 박물관을 관람했다. 인터넷에서만 보던 유명 작품들을 눈으로 직접 보다니! 너무나도 신기하고 재미있는 경험이었다.`,
-            dialogues: ["Vous ne pouvez pas entrer sans billet ou billet électronique.", "Il y a assez d'œuvres pour occuper toute la journée.", "Bonne visite !", "Par contre, merci de ne pas utiliser le flash.", "Il est interdit de manger dans les salles."],
+            dialogues: ["Vous ne pouvez pas entrer sans billet ou billet électronique.", "Il y a assez d'œuvres pour vous occuper toute la journée !", "Bonne visite !", "Par contre, merci de ne pas utiliser le flash.", "Il est interdit de manger dans les salles."],
             goals: ["티켓 설명 이해하고 필요한 티켓 구매하기", "허가와 금지에 대한 표현 이해하기", "루브르 박물관 전시 작품 감상하기"],
             sceneImage: `assets/images/museeDuLouvre.jpg`
         },
@@ -87,14 +87,14 @@ export function getSceneSummaries(currentState) {
             train: {
                 sceneTitle: "✈️ 리옹 제대로 즐기기",
                 description: `리옹행 기차를 타고 리옹에 가려는데... 기차 파업으로 인해 기차가 10분 늦게 출발했다. 다행히 큰 문제가 되지는 않았고, 나름? 신선한 경험이었다. 리옹에서는 "영화와 미니어처 박물관", "푸르비에르 대성당", "떼뜨 도흐 공원"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "리옹 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기", "박물관 작품 관람하기"],
                 sceneImage: `assets/images/lyonStreet.jpg`
             },
             bus: {
                 sceneTitle: "✈️ 리옹 제대로 즐기기",
                 description: `리옹행 버스를 타고 리옹으로 이동했다. 리옹에서는 "영화와 미니어처 박물관", "푸르비에르 대성당", "떼뜨 도흐 공원"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus part dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "리옹 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기", "박물관 작품 관람하기"],
                 sceneImage: `assets/images/lyonStreet.jpg`
             },
@@ -111,14 +111,14 @@ export function getSceneSummaries(currentState) {
             train: {
                 sceneTitle: "✈️ 마르세유 제대로 즐기기",
                 description: `마르세유행 기차를 타고 마르세유에 가려는데... 기차 파업으로 인해 기차가 10분 늦게 출발했다. 다행히 큰 문제가 되지는 않았고, 나름? 신선한 경험이었다. 마르세유에서는 "유럽 지중해 박물관", "노트르담 드 라 가르드 대성당", "마르세유 구 항구"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "마르세유 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기", "박물관 작품 관람하기"],
                 sceneImage: `assets/images/marseilleStreet.jpg`
             },
             bus: {
                 sceneTitle: "✈️ 마르세유 제대로 즐기기",
                 description: `마르세유행 버스를 타고 마르세유로 이동했다. 마르세유에서는 "유럽 지중해 박물관", "노트르담 드 라 가르드 대성당", "마르세유 구 항구"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus part dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "마르세유 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기", "박물관 작품 관람하기"],
                 sceneImage: `assets/images/marseilleStreet.jpg`
             },
@@ -135,14 +135,14 @@ export function getSceneSummaries(currentState) {
             train: {
                 sceneTitle: "✈️ 스트라스부르 제대로 즐기기",
                 description: `스트라스부르행 기차를 타고 스트라스부르에 가려는데... 기차 파업으로 인해 기차가 10분 늦게 출발했다. 다행히 큰 문제가 되지는 않았고, 나름? 신선한 경험이었다. 스트라스부르에서는 "클레베르 광장", "스트라스부르 노트르담 대성당", "쁘띠 프랑스"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "스트라스부르 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기"],
                 sceneImage: `assets/images/strasbourgStreet.jpg`
             },
             bus: {
                 sceneTitle: "✈️ 스트라스부르 제대로 즐기기",
                 description: `스트라스부르행 버스를 타고 스트라스부르로 이동했다. 스트라스부르에서는 "클레베르 광장", "스트라스부르 노트르담 대성당", "쁘띠 프랑스"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus part dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "스트라스부르 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기"],
                 sceneImage: `assets/images/strasbourgStreet.jpg`
             },
@@ -159,14 +159,14 @@ export function getSceneSummaries(currentState) {
             train: {
                 sceneTitle: "✈️ 보르도 제대로 즐기기",
                 description: `보르도행 기차를 타고 보르도에 가려는데... 기차 파업으로 인해 기차가 10분 늦게 출발했다. 다행히 큰 문제가 되지는 않았고, 나름? 신선한 경험이었다. 보르도에서는 "보르도 대성당", "부르스 광장", "보르도 와인 체험 박물관"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le train a été retardé à cause de la grève.", "Quand est-ce qu'il va arriver ?", "Le train partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "보르도 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기", "박물관 프로그램 참여하기"],
                 sceneImage: `assets/images/bordeauxStreet.jpg`
             },
             bus: {
                 sceneTitle: "✈️ 보르도 제대로 즐기기",
                 description: `보르도행 버스를 타고 보르도로 이동했다. 보르도에서는 "보르도 대성당", "부르스 광장", "보르도 와인 체험 박물관"를 둘러보았다. 파리와는 색다른 매력을 가진 아름다운 도시였다.`,
-                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus part dans une minute.", "Il ne faut fumer ni cigarette ni vapoteuse."],
+                dialogues: ["Vous devez aller au quai numéro douze.", "Le bus partira dans une minute.", "Il est interdit de fumer ou de vapoter dans tout le train."],
                 goals: ["교통편 정보 읽고 이해하기", "보르도 문화 이해하기", "안내 방송 듣고 이해하기", "가격 표현 이해하기", "각 장소의 소개글 읽고 이해하기", "박물관 프로그램 참여하기"],
                 sceneImage: `assets/images/bordeauxStreet.jpg`
             },

@@ -11,7 +11,7 @@ export function getMarseille1bcScene() {
         narration: "",
         lines: [
             { speaker: `👤 ${state.userName}`, text: `예매한 자리에 앉았다.` },,
-            { speaker: `🚈 Conducteur de bus`, text: `Le bus part dans une minute.`, sound: "assets/sounds/module4/busEmissionSpeak1.wav" },
+            { speaker: `🚈 Conducteur de bus`, text: `Le bus partira dans une minute.`, sound: "assets/sounds/module4/busEmissionSpeak1.wav" },
             { speaker: `🚈 Conducteur de bus`, text: `Avant de le départ, n'oubliez surtout pas d'attacher votre ceinture de sécurité.`, sound: "assets/sounds/module4/busEmissionSpeak2.wav" },
             { speaker: `🚈 Conducteur de bus`, text: `Il ne faut fumer ni cigarette ni vapoteuse dans le bus.`, sound: "assets/sounds/module4/busEmissionSpeak3.wav" },
             { speaker: `📢`, text: "짜잔~ 깜짝 퀴즈!" },
