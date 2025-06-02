@@ -16,9 +16,9 @@ export function getStrasbourg1acScene() {
             { speaker: `👤 ${state.userName}`, text: `기차가 올 때가 됐는데... 왜 이렇게 안 오지?` },
             { speaker: `👤 ${state.userName}`, text: `안내 직원에게 상황을 물어보자.` },
             { speaker: `👤 ${state.userName}`, text: `Excusez-moi.` },
-            { speaker: `👤 Agent en gare`, text: `Oui, vous avez besoin d'aide ?`, personImg: "assets/images/garePerson2.png" },
+            { speaker: `👤 Agent en gare`, text: `Oui, vous avez besoin d'aide ?`, personImg: "assets/images/garePerson2.png", sound: "assets/sounds/module4/trainRetardSpeak1.wav" },
             { speaker: `👤 ${state.userName}`, text: `Pourquoi le train n'arrive-t-il pas ?`, personImg: "assets/images/garePerson2.png" },
-            { speaker: `👤 Agent en gare`, text: `Le train a été retardé à cause de la grève.`, personImg: "assets/images/garePerson2.png" },
+            { speaker: `👤 Agent en gare`, text: `Le train a été retardé à cause de la grève.`, personImg: "assets/images/garePerson2.png", sound: "assets/sounds/module4/trainRetardSpeak2.wav" },
             { speaker: ``, text: `그러면 언제 기차가 도착하는지 물어봐야겠다.`, personImg: "assets/images/garePerson2.png" },
             { speaker: ``, text: ``, personImg: "assets/images/garePerson2.png",
                     production: {
@@ -30,8 +30,8 @@ export function getStrasbourg1acScene() {
              },
              { speaker: `👤 ${state.userName}`, text: `Quand est-ce qu'il va arriver ?`, personImg: "assets/images/garePerson2.png" },
              { speaker: `📢`, text: "문장 만들기 성공! 5점을 획득하였습니다.", personImg: "assets/images/garePerson2.png" },
-             { speaker: `👤 Agent en gare`, text: `Il arrive dans 10 minutes.`, personImg: "assets/images/garePerson2.png" },
-             { speaker: `👤 Agent en gare`, text: `Nous sommes vraiment désolés pour le retard.`, personImg: "assets/images/garePerson2.png" },
+             { speaker: `👤 Agent en gare`, text: `Il arrive dans 10 minutes.`, personImg: "assets/images/garePerson2.png", sound: "assets/sounds/module4/trainRetardSpeak3.wav" },
+             { speaker: `👤 Agent en gare`, text: `Nous sommes vraiment désolés pour le retard.`, personImg: "assets/images/garePerson2.png", sound: "assets/sounds/module4/trainRetardSpeak4.wav" },
              { speaker: ``, text: `뭐라고 답할까?`, personImg: "assets/images/garePerson2.png" },
              { speaker: ``, text: ``, personImg: "assets/images/garePerson2.png",
                 choices: {
