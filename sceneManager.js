@@ -328,7 +328,7 @@ async function handleNextLine() {
             state.currentModule = null;
             saveGameState();
 
-            getModuleSelecteScene()
+            loadScene(getModuleSelecteScene());
             renderQuest(state.currentQuest);
             return;
         }

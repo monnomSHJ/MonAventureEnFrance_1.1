@@ -21,12 +21,12 @@ export function getToilet1Scene() {
                             scoreDelta: 0,
                             insertLines: [
                                 { speaker: `👤 ${state.userName}`, text: `Bonjour, monsieur. Je voudrais savoir...` },
-                                { speaker: `👨 Monsieur`, text: `Oui ?`, personImg: `assets/images/streetPersonMale.png` },
+                                { speaker: `👨 Monsieur`, text: `Oui ?`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak1.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `Où est les toilettes, s'il vous plaît ?`, personImg: `assets/images/streetPersonMale.png` },
-                                { speaker: `👨 Monsieur`, text: `les toilettes ?`, personImg: `assets/images/streetPersonMale.png` },
-                                { speaker: `👨 Monsieur`, text: `Vous passez devant ce bâtiment là-bas, puis vous continuez tout droit.`, personImg: `assets/images/streetPersonMale.png` },
+                                { speaker: `👨 Monsieur`, text: `les toilettes ?`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak2.wav` },
+                                { speaker: `👨 Monsieur`, text: `Vous passez devant ce bâtiment là-bas, puis vous continuez tout droit.`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak3.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `Merci beaucoup !`, personImg: `assets/images/streetPersonMale.png` },
-                                { speaker: `👨 Monsieur`, text: `Avec plaisir !`, personImg: `assets/images/streetPersonMale.png` },
+                                { speaker: `👨 Monsieur`, text: `Avec plaisir !`, personImg: `assets/images/streetPersonMale.png`, sound: `assets/sounds/module3/toiletManSpeak4.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `남성 분이 알려주신 대로 화장실을 찾아가보자.` },
                             ]
                         },
@@ -35,12 +35,12 @@ export function getToilet1Scene() {
                             scoreDelta: 0,
                             insertLines: [
                                 { speaker: `👤 ${state.userName}`, text: `Bonjour, mademoiselle. Je voudrais savoir...` },
-                                { speaker: `👩 Madame`, text: `Oui ?`, personImg: `assets/images/streetPersonFemale.png` },
+                                { speaker: `👩 Madame`, text: `Oui ?`, personImg: `assets/images/streetPersonFemale.png`, sound: `assets/sounds/module3/toiletWomanSpeak1.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `Où sont les toilettes, s'il vous plaît ?`, personImg: `assets/images/streetPersonFemale.png` },
-                                { speaker: `👩 Madame`, text: `Les toilettes ?`, personImg: `assets/images/streetPersonFemale.png` },
-                                { speaker: `👩 Madame`, text: `Vous passez devant ce bâtiment là-bas, puis vous continuez tout droit.`, personImg: `assets/images/streetPersonFemale.png` },
+                                { speaker: `👩 Madame`, text: `Les toilettes ?`, personImg: `assets/images/streetPersonFemale.png`, sound: `assets/sounds/module3/toiletWomanSpeak2.wav` },
+                                { speaker: `👩 Madame`, text: `Vous passez devant ce bâtiment là-bas, puis vous continuez tout droit.`, personImg: `assets/images/streetPersonFemale.png`, sound: `assets/sounds/module3/toiletWomanSpeak3.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `Merci beaucoup !`, personImg: `assets/images/streetPersonFemale.png` },
-                                { speaker: `👩 Madame`, text: `Avec plaisir !`, personImg: `assets/images/streetPersonFemale.png` },
+                                { speaker: `👩 Madame`, text: `Avec plaisir !`, personImg: `assets/images/streetPersonFemale.png`, sound: `assets/sounds/module3/toiletWomanSpeak4.wav` },
                                 { speaker: `👤 ${state.userName}`, text: `여성 분이 알려주신 대로 화장실을 찾아가보자.` },
                             ]
                         }

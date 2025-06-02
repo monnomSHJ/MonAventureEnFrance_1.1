@@ -20,7 +20,7 @@ export function getBordeaux2cScene() {
         });
 
         return [
-            wrongAnswer("12` 유로"),
+            wrongAnswer("12 유로"),
             {
                 label: "22 유로",
                 scoreDelta: 1,

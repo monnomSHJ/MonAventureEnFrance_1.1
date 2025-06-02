@@ -11,10 +11,10 @@ export function getBordeaux1adScene() {
         narration: "",
         lines: [
             { speaker: `👤 ${state.userName}`, text: `예매한 자리에 앉았다.` },
-            { speaker: `🚈 Conducteur de train`, text: `Nous vous remercions de votre patience et de votre compréhension.` },
-            { speaker: `🚈 Conducteur de train`, text: `Le train partira dans une minute.` },
-            { speaker: `🚈 Conducteur de train`, text: `Avant de le départ, n'oubliez surtout pas d'attacher votre ceinture de sécurité.` },
-            { speaker: `🚈 Conducteur de train`, text: `Il est interdit de fumer ou de vapoter dans tout le train.` },
+            { speaker: `🚈 Conducteur de train`, text: `Nous vous remercions de votre patience et de votre compréhension.`, sound: "assets/sounds/module4/trainEmissionSpeak1.wav" },
+            { speaker: `🚈 Conducteur de train`, text: `Le train partira dans une minute.`, sound: "assets/sounds/module4/trainEmissionSpeak2.wav" },
+            { speaker: `🚈 Conducteur de train`, text: `Avant de le départ, n'oubliez surtout pas d'attacher votre ceinture de sécurité.`, sound: "assets/sounds/module4/trainEmissionSpeak3.wav" },
+            { speaker: `🚈 Conducteur de train`, text: `Il est interdit de fumer ou de vapoter dans tout le train.`, sound: "assets/sounds/module4/trainEmissionSpeak4.wav" },
             { speaker: `📢`, text: "짜잔~ 깜짝 퀴즈!" },
             { speaker: ``, text: "",
                 choices: {
