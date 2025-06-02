@@ -12,9 +12,9 @@ export function getLyon1cbScene() {
             { speaker: `👤 ${state.userName}`, text: `공항에 도착했다!` },
             { speaker: `👤 ${state.userName}`, text: `어디에서 탑승해야 하는지 직원분께 여쭤봐야겠다.` },
             { speaker: `👤 ${state.userName}`, text: `Bonjour, je voudrais aller à Lyon.` },
-            { speaker: `👤 Employée`, text: `D'accord. Vous devez aller à la porte numéro douze.`, personImg: `assets/images/garePerson1.png` },
+            { speaker: `👤 Employée`, text: `D'accord. Vous devez aller à la porte numéro douze.`, personImg: `assets/images/garePerson1.png`, sound: "assets/sounds/module4/airportPlatformSpeak1.wav" },
             { speaker: `👤 ${state.userName}`, text: `Merci beaucoup.`, personImg: `assets/images/garePerson1.png` },
-            { speaker: `👤 Employée`, text: `Avec plaisir. Bon voyage !`, personImg: `assets/images/garePerson1.png` },
+            { speaker: `👤 Employée`, text: `Avec plaisir. Bon voyage !`, personImg: `assets/images/garePerson1.png`, sound: "assets/sounds/module4/airportPlatformSpeak2.wav" },
             { speaker: `👤 ${state.userName}`, text: `알맞은 탑승구로 가보자.` },
             { speaker: ``, text: ``, 
                 choices: {
